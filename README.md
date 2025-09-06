@@ -1,0 +1,2 @@
+# SmartWhiz
+Simple Portfolio Website
