@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartWhiz Edutech</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="smartwhiz/css/style3.css">
+</head>
+<body>
+    <div class="top-bar">
+        <div class="top-bar-container">
+            <div class="top-bar-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="top-bar-contact">
+                <a href="mailto:info@smartwhizedu.com"><i class="fas fa-envelope"></i> info@smartwhizedu.com</a>
+                <a href="tel:+917888066601"><i class="fas fa-phone-alt"></i> +91 78880 66601</a>
+            </div>
+        </div>
+    </div>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#"><img src="smartwhiz/images/logo.png" alt="SmartWhiz Edutech"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#our-services">Services</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#" id="enquiry-now-btn" class="enquiry-now-btn">Enquiry Now</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="enquiry-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="counseling-form-container">
+                <div class="section-title">
+                    <p class="tittle"><i class="fas fa-calendar-check"></i> Get a Free Consultation</p>
+                </div>
+                <form id="free-counseling-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <i class="fas fa-user"></i>
+                            <input type="text" name="student-name" placeholder="Student's Name" required>
+                        </div>
+                        <div class="form-group">
+                            <i class="fas fa-phone"></i>
+                            <input type="tel" name="mobile-number" placeholder="Mobile Number" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" name="email-id" placeholder="Email-ID" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <i class="fas fa-city"></i>
+                            <input type="text" name="city" placeholder="City" required>
+                        </div>
+                        <div class="form-group">
+                            <i class="fas fa-flag"></i>
+                            <input type="text" name="state" placeholder="State" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <i class="fas fa-graduation-cap"></i>
+                        <input type="text" name="last-qualification" placeholder="Last Qualification" required>
+                    </div>
+                    <button type="submit">Book Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <section id="hero">
+        <div class="hero-container">
+            <h1>Welcome to SmartWhiz Edutech</h1>
+            <p>Your trusted partner in navigating the path to higher education.</p>
+            <a href="#contact" class="cta-button">Get Started</a>
+        </div>
+    </section>
+
+    <div id="info-cards">
+        <div class="info-cards-container">
+            <div class="info-card info-card-1">
+                <i class="fas fa-hands-helping"></i>
+                <h3>One-Stop Solution</h3>
+                <p>Get Expert Career Counseling to guide your future, with Personalized Course & College Selection in India & Abroad</p>
+            </div>
+            <div class="info-card info-card-2">
+                <i class="fas fa-university"></i>
+                <h3>Admission Hubs</h3>
+                <p>Hassle-free admission guidance with complete Application & Documentation support for both India & Abroad</p>
+            </div>
+            <div class="info-card info-card-3">
+                <i class="fas fa-hand-holding-usd"></i>
+                <h3>Scholarships & Education Loan</h3>
+                <p>Step into your dream college with Scholarship & Education Loan Assistance</p>
+            </div>
+        </div>
+    </div>
+
+    <section id="about">
+        <div class="about-container">
+            <div class="section-title">
+                <p class="tittle"><i class="fas fa-info-circle"></i> About SmartWhiz</p>
+                <h2 class="sub-tittle">Your Trusted Education Partner</h2>
+            </div>
+            <p>Embark on your academic journey with SmartWhiz Edutech, your trusted partner in securing admission to top universities in India and abroad. We are a team of passionate and experienced education consultants dedicated to turning your academic dreams into reality. Whether you aspire to study at a prestigious institution in India or explore global opportunities, our personalized guidance and comprehensive support will pave the way for your success. From selecting the right course and university to navigating the complexities of applications and visas, we are with you every step of the way, ensuring a seamless and successful admission process.</p>
+        </div>
+    </section>
+
+    <section id="courses">
+        <div class="courses-container">
+            <div class="section-title">
+                <p class="tittle"><i class="fas fa-graduation-cap"></i> Get Admissions in</p>
+                <h2 class="sub-tittle">UG & PG Courses</h2>
+            </div>
+            <div class="slider-container">
+                <div class="course-cards">
+                    <div class="card">
+                        <img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Management Courses">
+                        <div class="card-content">
+                            <h3><i class="fas fa-briefcase"></i> Management</h3>
+                            <div class="course-description">
+                                <p>We offer expert guidance for a wide range of management programs, including BBA, MBA, PGDM, B.com, BMS, MMS, and specialized courses in marketing, finance, and human resources. Let us help you unlock your leadership potential.</p>
+                            </div>
+                            <button class="course-read-more-btn">Read More</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.pexels.com/photos/3825586/pexels-photo-3825586.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Medical Courses">
+                        <div class="card-content">
+                            <h3><i class="fas fa-user-doctor"></i> Medical</h3>
+                            <div class="course-description">
+                                <p>Pursue your dream of a healthcare career with our support for medical degrees like MBBS, BDS, BAMS, and BHMS.</p>
+                            </div>
+                            <button class="course-read-more-btn">Read More</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.pexels.com/photos/256517/pexels-photo-256517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Engineering Courses">
+                        <div class="card-content">
+                            <h3><i class="fas fa-cogs"></i> Engineering</h3>
+                            <div class="course-description">
+                                <p>Build a successful career in engineering with our assistance for a variety of technical courses. We offer guidance for B.Tech, M.Tech, BE, and specialized programs in computer science, mechanical, and electrical engineering.</p>
+                            </div>
+                            <button class="course-read-more-btn">Read More</button>
+                        </div>
+                    </div>
+                    <div class="card law-card">
+                        <img src="https://images.pexels.com/photos/8112154/pexels-photo-8112154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Law Courses">
+                        <div class="card-content">
+                            <h3><i class="fas fa-gavel"></i> Law</h3>
+                            <div class="course-description">
+                                <p>Gain admission to top law schools with our comprehensive support. We provide guidance for LLB, LLM, and other law programs, helping you navigate the path to a successful legal career.</p>
+                            </div>
+                            <button class="course-read-more-btn">Read More</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Other Courses">
+                        <div class="card-content">
+                            <h3><i class="fas fa-layer-group"></i> Others</h3>
+                            <div class="course-description">
+                                <p>Explore a wide range of other courses, including pharmacy, nursing, paramedical, diploma, and certification courses. Our expert team will help you find the perfect fit for your academic and career goals.</p>
+                            </div>
+                            <button class="course-read-more-btn">Read More</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="slider-button prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="slider-button next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section id="our-services">
+        <div class="container">
+            <div class="section-title">
+                <p class="tittle"><i class="fas fa-concierge-bell"></i> Our Exclusive Services</p>
+                <h2 class="sub-tittle">What We Offer</h2>
+            </div>
+            <div class="info-cards-container">
+                <div class="info-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Career Counseling</h3>
+                    <p>Our expert counselors help you identify your strengths, interests, and career goals to make informed decisions about your future.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-university"></i>
+                    <h3>University Selection</h3>
+                    <p>We assist you in selecting the right universities based on your academic profile, budget, and preferences.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-file-alt"></i>
+                    <h3>Application Assistance</h3>
+                    <p>We provide complete support with your application, including resume building, statement of purpose, and letters of recommendation.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Admission Guidance</h3>
+                    <p>We guide you through the entire admission process, ensuring a smooth and successful journey to your dream university.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-comments-dollar"></i>
+                    <h3>Financial Aid and Scholarships</h3>
+                    <p>We help you explore financial aid options and scholarships to make your education affordable.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-life-ring"></i>
+                    <h3>Visa and Pre-Departure Support</h3>
+                    <p>We provide comprehensive support for your visa application and pre-departure preparations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="beyond-admissions">
+    <div class="container">
+        <div class="section-title">
+            <p class="tittle"><i class="fas fa-star"></i> Beyond Admissions</p>
+            <h2 class="sub-tittle">Value-Added Services</h2>
+        </div>
+        <div class="beyond-admissions-container">
+            <div class="beyond-admissions-image">
+            </div>
+            <div class="beyond-admissions-content">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-passport"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Visa Process</h3>
+                        <p>Turn your Study Abroad Dream into Success with our step-by-step Visa Process Guidance, from Paperwork to Approval.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Accommodation Assistance</h3>
+                        <p>We provide complete Accommodation Assistance for students Studying Abroad, ensuring safe, affordable and comfortable housing options near Universities.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Travel Support</h3>
+                        <p>Complete Travel Support ensures students get the best Flight options, Travel Insurance and Forex Guidance for a smooth Study Abroad journey.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="why-choose-us">
+        <div class="why-choose-us-container">
+            <div class="section-title">
+                <p class="tittle"><i class="fas fa-question-circle"></i> Why Choose Us</p>
+                <h2 class="sub-tittle">Our Commitment to Excellence</h2>
+            </div>
+            <div class="stats-container">
+                <div class="stat-card">
+                    <i class="fas fa-user-graduate"></i>
+                    <h3 class="stat-number" data-target="5000" data-suffix="+">0</h3>
+                    <p>Happy Students</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-university"></i>
+                    <h3 class="stat-number" data-target="500" data-suffix="+">0</h3>
+                    <p>Partner Universities</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-trophy"></i>
+                    <h3 class="stat-number" data-target="96" data-suffix="%">0</h3>
+                    <p>Success Rate</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-award"></i>
+                    <h3 class="stat-number" data-target="12" data-suffix="+">0</h3>
+                    <p>Years of Experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <p class="tittle"><i class="fas fa-comment-dots"></i> What Our Students Say</p>
+                <h2 class="sub-tittle">Testimonials</h2>
+            </div>
+            <div class="testimonial-slider-container">
+                <div class="testimonial-cards">
+                    <div class="testimonial-card">
+                        <div class="testimonial-image">
+                            <img src="smartwhiz/images/testimonials/sbjain.jpeg" alt="Student 1">
+                        </div>
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">"Best service and assistance. I got admission in SP Jain School of Global Management through their help."</p>
+                            <button class="testimonial-read-more-btn">Read More</button>
+                            <h4>Shreya Patle</h4>
+                            <span>SP Jain, Mumbai</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-image">
+                            <img src="smartwhiz/images/testimonials/Tapmi.jpeg" alt="Student 2">
+                        </div>
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">"I would like to say thank you to SmartWhiz Edutech and especially Sadhana mam for guiding me to get the best MBA collage as per my CAT score. She also kept me informed about the applications deadlines and other information. Honestly, there was a time when I was completely unaware about the MBA collages rather than IIMs but then she helped me as a ray of hope in the darkness."</p>
+                            <button class="testimonial-read-more-btn">Read More</button>
+                            <h4>Tejas Talakwar</h4>
+                            <span>TAPMI, Manipal</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-image">
+                            <img src="smartwhiz/images/testimonials/welingkar.jpeg" alt="Aniket Lanjewar">
+                        </div>
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">"Chosing SmartWhiz Edutech Pvt.Ltd. has been a good decision as it helped me to chose a right career path and a right course for my PG in MBA. I was confused at first with which college would suit my profile the best but the consultation was really helpful for me. Finally i took an admission in PGDM core at welingkar and it has been a great start of my MBA journey since."</p>
+                            <button class="testimonial-read-more-btn">Read More</button>
+                            <h4>Aniket Lanjewar</h4>
+                            <span>Welingkar, Mumbai</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-image">
+                            <img src="smartwhiz/images/testimonials/universal.jpeg" alt="Shivam Khandait">
+                        </div>
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">"Thanks to SmartWhiz Edutech, I secured admission at Universal Ai University (UBS) an institution know for it rich resources, Ai based curriculum and corporate driven exposure. I'm truly grateful to Sagir sir and Priyanka mam for their constant guidance and support in helping me make the right decision."</p>
+                            <button class="testimonial-read-more-btn">Read More</button>
+                            <h4>Shivam Khandait</h4>
+                            <span>Universal AI University, Mumbai</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-image">
+                            <img src="smartwhiz/images/testimonials/default-avatar.svg" alt="Palak Surana">
+                        </div>
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">"I am Palak Surana from Nagpur and I am happy to tell you that I got admission to one of the good MBA college of Maharashtra, Lala Lajpatrai Institute of Management for MMS-Finance program. My CET percentile was 95.6. Subsequent to declaration of CET results I was perplexed regarding selection of good college. During this time 'Smartwhiz Edutech' really helped me to choose the best college. It's all because of their consulting that I got admission to such a prestigious college. They helped me not just to select college but also not to get trapped for colleges which are not upto the mark. I am very thankful to 'Smartwhiz Edutech' from bottom of my heart, esp. their coordinator Samiksha Mam. She really helped me out with a lot of patience.
+One thing that I can profess about 'Smartwhiz Edutech' is they will never deceive you neither mislead you at any cost. It's one of the most trusted education consultancy I have ever met."</p>
+                            <button class="testimonial-read-more-btn">Read More</button>
+                            <h4>Palak Surana</h4>
+                            <span>LLIM, Mumbai</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-image">
+                            <img src="smartwhiz/images/testimonials/default-avatar.svg" alt="Vishal Khetan">
+                        </div>
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">"Hello, My name is Vishal khetan Choosing a right career is a big decision and when you have someone to guide in that it's the best help which you can get. I would like to thank Samiksha for helping me choosing a right career, with her support I'm doing well in my academics. Thankyou Samiksha for being a part of my career. It's a great help👍"</p>
+                            <button class="testimonial-read-more-btn">Read More</button>
+                            <h4>Vishal Khetan</h4>
+                            <span>ISB&M, Pune</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-image">
+                            <img src="smartwhiz/images/testimonials/lloyd.jpeg" alt="Kritika Prajapati">
+                        </div>
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">"Ma'am your company has provided me the best guide about my admissions in pgdm. Especially you helped me to select the college that suit my needs most appropriately. A very big thanks to you maam for helping me."</p>
+                            <button class="testimonial-read-more-btn">Read More</button>
+                            <h4>Kritika Prajapati</h4>
+                            <span>Lloyd, Noida</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="testimonial-slider-button prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="testimonial-slider-button next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section id="top-institutions">
+        <div class="container">
+            <div class="section-title">
+                <p class="tittle"><i class="fas fa-university"></i> Top Ranked Institutions</p>
+            </div>
+            <div class="institution-logo-slider">
+                <div class="institution-logos">
+                    <img src="smartwhiz/images/collegelogo/alliance.png" alt="Alliance University">
+                    <img src="smartwhiz/images/collegelogo/bharti.jpg" alt="Bharti Vidyapeeth">
+                    <img src="smartwhiz/images/collegelogo/bimtech.jpg" alt="Bimtech">
+                    <img src="smartwhiz/images/collegelogo/christ.jpeg" alt="Christ University">
+                    <img src="smartwhiz/images/collegelogo/dypatil.jpg" alt="DY Patil">
+                    <img src="smartwhiz/images/collegelogo/four.png" alt="Four School of Management">
+                    <img src="smartwhiz/images/collegelogo/jaipuria.png" alt="Jaipuria Institute of Management">
+                    <img src="smartwhiz/images/collegelogo/kjsomaiya.png" alt="KJ Somaiya">
+                    <img src="smartwhiz/images/collegelogo/mit.png" alt="MIT">
+                    <img src="smartwhiz/images/collegelogo/msramaiah.png" alt="MS Ramaiah">
+                    <img src="smartwhiz/images/collegelogo/nmims.png" alt="NMIMS">
+                    <img src="smartwhiz/images/collegelogo/spjain.png" alt="SP Jain">
+                    <img src="smartwhiz/images/collegelogo/srm.png" alt="SRM">
+                    <img src="smartwhiz/images/collegelogo/symbiosis.png" alt="Symbiosis">
+                    <img src="smartwhiz/images/collegelogo/tapmi.png" alt="TAPMI">
+                    <img src="smartwhiz/images/collegelogo/vit.jpg" alt="VIT">
+                    <img src="smartwhiz/images/collegelogo/welinkar.png" alt="Welingkar">
+                    <img src="smartwhiz/images/collegelogo/xub.jpeg" alt="XUB">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education-loan">
+        <div class="container">
+            <div class="section-title">
+                <p class="tittle"><i class="fas fa-hand-holding-usd"></i> Education Loan</p>
+                <h2 class="sub-tittle">Funding Your Future</h2>
+            </div>
+            <div class="bank-logo-slider">
+                <div class="bank-logos">
+                    <img src="smartwhiz/images/sbi.png" alt="SBI Bank">
+                    <img src="smartwhiz/images/BOI.png" alt="Bank of India">
+                    <img src="smartwhiz/images/pnb.jpg" alt="PNB Bank">
+                    <img src="smartwhiz/images/hdfc.png" alt="HDFC Credila">
+                    <img src="smartwhiz/images/tata.webp" alt="Tata Capital">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+    <div class="container">
+        <div class="section-title">
+            <p class="tittle"><i class="fas fa-headset"></i> Get in Touch</p>
+            <h2 class="sub-tittle">Contact Us</h2>
+        </div>
+        <div class="contact-wrapper">
+            <div class="contact-form">
+                <h3>Send us a Message</h3>
+                <form id="counselling-form">
+                    <div class="form-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <i class="fas fa-phone"></i>
+                        <input type="tel" name="phone" placeholder="Your Phone" required>
+                    </div>
+                    <div class_="form-group">
+                        <i class="fas fa-comment-alt"></i>
+                        <textarea name="message" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 1st Floor, SmartWhiz Edutech, Mangalwari Bazar Rd, opposite Raisoni College, Sadar, Nagpur, Maharashtra 440001</p>
+                <p><i class="fas fa-phone"></i> +91 78880 66601</p>
+                <p><i class="fas fa-envelope"></i> info@smartwhizedu.com</p>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.492923533614!2d79.08003141493427!3d21.12294508594273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c0e5a2a7a9cb%3A0x4b7b3c7b6d7a5f8b!2sRaisoni%20College!5e0!3m2!1sen!2sin!4v1678956385732!5m2!1sen!2sin" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-about">
+            <img src="smartwhiz/images/logo.png" alt="SmartWhiz Edutech" class="footer-logo">
+            <p>Your trusted partner in navigating the path to higher education. We provide expert guidance and support to help you achieve your academic and professional goals.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#beyond-admissions">Services</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-courses">
+            <h4>Courses</h4>
+            <ul>
+                <li><a href="#courses">Management</a></li>
+                <li><a href="#courses">Medical</a></li>
+                <li><a href="#courses">Engineering</a></li>
+                <li><a href="#courses">Law</a></li>
+                <li><a href="#courses">Others</a></li>
+            </ul>
+        </div>
+        <div class="footer-contact">
+            <h4>Contact Us</h4>
+            <ul>
+                <li><i class="fas fa-map-marker-alt"></i><span>1st Floor, SmartWhiz Edutech, Mangalwari Bazar Rd, opposite Raisoni College, Sadar, Nagpur, Maharashtra 440001</span></li>
+                <li><i class="fas fa-phone"></i><span>+91 78880 66601</span></li>
+                <li><i class="fas fa-envelope"></i><span>info@smartwhizedu.com</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2017 SmartWhiz Edutech. All Rights Reserved.</p>
+    </div>
+</footer>
+
+    <button id="scroll-to-top"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="smartwhiz/js/main2.js"></script>
+    <script src="smartwhiz/js/slider.js"></script>
+</body>
+</html>
