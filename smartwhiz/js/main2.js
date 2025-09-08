@@ -113,30 +113,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const enquiryBtn = document.getElementById('enquiry-now-btn');
     const modal = document.getElementById('enquiry-modal');
     const closeBtn = document.querySelector('.close-btn');
-    const enquiryForm = document.getElementById('free-counseling-form');
-    const enquiryFormStatus = document.getElementById('enquiry-form-status');
     
-    const enquiryNameInput = enquiryForm.querySelector('input[name="student-name"]');
-    const enquiryMobileInput = enquiryForm.querySelector('input[name="mobile-number"]');
-    const enquiryCityInput = enquiryForm.querySelector('input[name="city"]');
-    const enquiryStateInput = enquiryForm.querySelector('input[name="state"]');
-
-    enquiryNameInput.addEventListener('input', (e) => {
-        e.target.value = e.target.value.replace(/[^a-zA-Z\s]/g, '');
-    });
-
-    enquiryMobileInput.addEventListener('input', (e) => {
-        e.target.value = e.target.value.replace(/[^\d]/g, '');
-    });
-
-    enquiryCityInput.addEventListener('input', (e) => {
-        e.target.value = e.target.value.replace(/[^a-zA-Z\s]/g, '');
-    });
-
-    enquiryStateInput.addEventListener('input', (e) => {
-        e.target.value = e.target.value.replace(/[^a-zA-Z\s]/g, '');
-    });
-
     enquiryBtn.addEventListener('click', (e) => {
         e.preventDefault();
         modal.style.display = 'block';
@@ -150,62 +127,6 @@ document.addEventListener('DOMContentLoaded', function () {
         if (e.target == modal) {
             modal.style.display = 'none';
         }
-    });
-
-    enquiryForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-
-        const formData = new FormData(this);
-
-        fetch('send_free_counseling.php', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.text())
-        .then(data => {
-            enquiryFormStatus.innerHTML = data;
-            enquiryForm.reset();
-            setTimeout(() => {
-                modal.style.display = 'none';
-                enquiryFormStatus.innerHTML = '';
-            }, 3000);
-        })
-        .catch(error => {
-            enquiryFormStatus.innerHTML = "Oops! There was a problem with your submission. Please try again.";
-        });
-    });
-
-    // Contact Us Form
-    const contactForm = document.getElementById('counselling-form');
-    const formStatus = document.getElementById('form-status');
-    const contactNameInput = contactForm.querySelector('input[name="name"]');
-    const contactPhoneInput = contactForm.querySelector('input[name="phone"]');
-
-    contactNameInput.addEventListener('input', (e) => {
-        e.target.value = e.target.value.replace(/[^a-zA-Z\s]/g, '');
-    });
-
-    contactPhoneInput.addEventListener('input', (e) => {
-        e.target.value = e.target.value.replace(/[^\d]/g, '');
-    });
-
-    contactForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-
-        const formData = new FormData(this);
-
-        fetch('send_enquiry.php', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.text())
-        .then(data => {
-            formStatus.innerHTML = data;
-            contactForm.reset();
-        })
-        .catch(error => {
-            formStatus.innerHTML = "Oops! There was a problem with your submission. Please try again.";
-        });
     });
 
     const scrollToTopBtn = document.getElementById("scroll-to-top");

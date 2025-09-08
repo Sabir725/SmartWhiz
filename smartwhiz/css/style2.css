@@ -4,7 +4,7 @@
     }
 
     .top-bar-social {
-        margin-bottom: 10px;
+        display: none;
     }
 
     .nav-links {
@@ -30,6 +30,10 @@
 
     .burger {
         display: block;
+    }
+
+    #hero {
+        height: 60vh;
     }
 
     .hero-container h1 {
@@ -99,6 +103,9 @@
     .top-bar-contact a {
         display: block;
         margin: 5px 0;
+    }
+    #hero {
+        height: 50vh;
     }
     .stats-container {
         grid-template-columns: 1fr;
