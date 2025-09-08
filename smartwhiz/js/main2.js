@@ -168,4 +168,68 @@ document.addEventListener('DOMContentLoaded', function () {
 
     setInterval(changeBackgroundImage, 5000);
     changeBackgroundImage();
+
+    // --- Form Submission to Pop-up ---
+    const thankYouModal = document.getElementById('thank-you-modal');
+    const thankYouCloseBtn = document.querySelector('.thank-you-close-btn');
+
+    const handleFormSubmit = async (event) => {
+        event.preventDefault(); // Prevent default form submission
+        const form = event.target;
+        const formData = new FormData(form);
+        const action = form.getAttribute('action');
+
+        try {
+            const response = await fetch(action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                // Hide the form's modal if it exists
+                const parentModal = form.closest('.modal');
+                if (parentModal) {
+                    parentModal.style.display = 'none';
+                }
+
+                // Reset the form
+                form.reset();
+
+                // Show the thank you pop-up
+                thankYouModal.style.display = 'block';
+            } else {
+                // Handle server errors (e.g., if formsubmit.co is down)
+                alert('Oops! There was a problem submitting your form. Please try again later.');
+            }
+        } catch (error) {
+            // Handle network errors
+            console.error('Submission error:', error);
+            alert('Oops! There was a network problem. Please check your connection and try again.');
+        }
+    };
+
+    const freeCounselingForm = document.getElementById('free-counseling-form');
+    const contactForm = document.getElementById('counselling-form');
+
+    if (freeCounselingForm) {
+        freeCounselingForm.addEventListener('submit', handleFormSubmit);
+    }
+    if (contactForm) {
+        contactForm.addEventListener('submit', handleFormSubmit);
+    }
+
+    // Close the thank you modal
+    thankYouCloseBtn.addEventListener('click', () => {
+        thankYouModal.style.display = 'none';
+    });
+
+    // Close thank you modal on outside click
+    window.addEventListener('click', (e) => {
+        if (e.target == thankYouModal) {
+            thankYouModal.style.display = 'none';
+        }
+    });
 });
