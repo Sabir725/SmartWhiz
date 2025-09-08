@@ -6,6 +6,7 @@
     <title>SmartWhiz Edutech</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="smartwhiz/css/style3.css">
+    <link rel="stylesheet" href="smartwhiz/css/style2.css">
 </head>
 <body>
     <div class="top-bar">
@@ -50,7 +51,7 @@
                 <div class="section-title">
                     <p class="tittle"><i class="fas fa-calendar-check"></i> Get a Free Consultation</p>
                 </div>
-                <form id="free-counseling-form">
+                <form id="free-counseling-form" action="send_free_counseling.php" method="post">
                     <div class="form-row">
                         <div class="form-group">
                             <i class="fas fa-user"></i>
@@ -80,6 +81,7 @@
                         <input type="text" name="last-qualification" placeholder="Last Qualification" required>
                     </div>
                     <button type="submit">Book Now</button>
+                    <div id="enquiry-form-status"></div>
                 </form>
             </div>
         </div>
@@ -452,7 +454,7 @@ One thing that I can profess about 'Smartwhiz Edutech' is they will never deceiv
         <div class="contact-wrapper">
             <div class="contact-form">
                 <h3>Send us a Message</h3>
-                <form id="counselling-form">
+                <form id="counselling-form" action="send_enquiry.php" method="post">
                     <div class="form-group">
                         <i class="fas fa-user"></i>
                         <input type="text" name="name" placeholder="Your Name" required>
@@ -465,11 +467,12 @@ One thing that I can profess about 'Smartwhiz Edutech' is they will never deceiv
                         <i class="fas fa-phone"></i>
                         <input type="tel" name="phone" placeholder="Your Phone" required>
                     </div>
-                    <div class_="form-group">
+                    <div class="form-group">
                         <i class="fas fa-comment-alt"></i>
                         <textarea name="message" placeholder="Your Message" required></textarea>
                     </div>
                     <button type="submit">Send Message</button>
+                    <div id="form-status"></div>
                 </form>
             </div>
             <div class="contact-info">
@@ -533,6 +536,7 @@ One thing that I can profess about 'Smartwhiz Edutech' is they will never deceiv
 
     <button id="scroll-to-top"><i class="fas fa-arrow-up"></i></button>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="smartwhiz/js/main2.js"></script>
     <script src="smartwhiz/js/slider.js"></script>
 </body>

@@ -114,6 +114,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const modal = document.getElementById('enquiry-modal');
     const closeBtn = document.querySelector('.close-btn');
     const enquiryForm = document.getElementById('free-counseling-form');
+    const enquiryFormStatus = document.getElementById('enquiry-form-status');
     
     const enquiryNameInput = enquiryForm.querySelector('input[name="student-name"]');
     const enquiryMobileInput = enquiryForm.querySelector('input[name="mobile-number"]');
@@ -151,73 +152,32 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    enquiryForm.addEventListener('submit', (e) => {
+    enquiryForm.addEventListener('submit', function (e) {
         e.preventDefault();
-        
-        const name = enquiryForm.querySelector('input[name="student-name"]');
-        const mobile = enquiryForm.querySelector('input[name="mobile-number"]');
-        const email = enquiryForm.querySelector('input[name="email-id"]');
-        const city = enquiryForm.querySelector('input[name="city"]');
-        const state = enquiryForm.querySelector('input[name="state"]');
-        const qualification = enquiryForm.querySelector('input[name="last-qualification"]');
 
-        if (!name.value || !/^[a-zA-Z\s]+$/.test(name.value)) {
-            alert('Please enter a valid name (letters and spaces only).');
-            return;
-        }
+        const formData = new FormData(this);
 
-        if (!mobile.value || !/^[\d]{10}$/.test(mobile.value)) {
-            alert('Please enter a valid 10-digit mobile number.');
-            return;
-        }
-
-        if (!email.value || !/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email.value)) {
-            alert('Please enter a valid email address.');
-            return;
-        }
-
-        if (!city.value || !/^[a-zA-Z\s]+$/.test(city.value)) {
-            alert('Please enter a valid city (letters and spaces only).');
-            return;
-        }
-
-        if (!state.value || !/^[a-zA-Z\s]+$/.test(state.value)) {
-            alert('Please enter a valid state (letters and spaces only).');
-            return;
-        }
-
-        if (!qualification.value) {
-            alert('Please enter your last qualification.');
-            return;
-        }
-
-        const subject = 'New Enquiry from SmartWhiz Website';
-        const body = `
-            Name: ${name.value}
-            Mobile: ${mobile.value}
-            Email: ${email.value}
-            City: ${city.value}
-            State: ${state.value}
-            Last Qualification: ${qualification.value}
-        `;
-        
-        window.open(`mailto:smartwhizedu@gmail.com?subject=${subject}&body=${encodeURIComponent(body)}`);
-
-        const successMessage = document.createElement('p');
-        successMessage.textContent = 'Thank you for your enquiry! We will get back to you shortly.';
-        successMessage.style.color = 'green';
-        successMessage.style.marginTop = '10px';
-        enquiryForm.appendChild(successMessage);
-
-        setTimeout(() => {
+        fetch('send_free_counseling.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.text())
+        .then(data => {
+            enquiryFormStatus.innerHTML = data;
             enquiryForm.reset();
-            successMessage.remove();
-            modal.style.display = 'none';
-        }, 3000);
+            setTimeout(() => {
+                modal.style.display = 'none';
+                enquiryFormStatus.innerHTML = '';
+            }, 3000);
+        })
+        .catch(error => {
+            enquiryFormStatus.innerHTML = "Oops! There was a problem with your submission. Please try again.";
+        });
     });
 
     // Contact Us Form
     const contactForm = document.getElementById('counselling-form');
+    const formStatus = document.getElementById('form-status');
     const contactNameInput = contactForm.querySelector('input[name="name"]');
     const contactPhoneInput = contactForm.querySelector('input[name="phone"]');
 
@@ -229,54 +189,23 @@ document.addEventListener('DOMContentLoaded', function () {
         e.target.value = e.target.value.replace(/[^\d]/g, '');
     });
 
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', function (e) {
         e.preventDefault();
 
-        const name = contactForm.querySelector('input[name="name"]');
-        const email = contactForm.querySelector('input[name="email"]');
-        const phone = contactForm.querySelector('input[name="phone"]');
-        const message = contactForm.querySelector('textarea[name="message"]');
+        const formData = new FormData(this);
 
-        if (!name.value || !/^[a-zA-Z\s]+$/.test(name.value)) {
-            alert('Please enter a valid name (letters and spaces only).');
-            return;
-        }
-
-        if (!email.value || !/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email.value)) {
-            alert('Please enter a valid email address.');
-            return;
-        }
-
-        if (!phone.value || !/^[\d]{10}$/.test(phone.value)) {
-            alert('Please enter a valid 10-digit mobile number.');
-            return;
-        }
-
-        if (!message.value) {
-            alert('Please enter your message.');
-            return;
-        }
-
-        const subject = 'New Message from SmartWhiz Website Contact Form';
-        const body = `
-            Name: ${name.value}
-            Email: ${email.value}
-            Phone: ${phone.value}
-            Message: ${message.value}
-        `;
-
-        window.open(`mailto:smartwhizedu@gmail.com?subject=${subject}&body=${encodeURIComponent(body)}`);
-
-        const successMessage = document.createElement('p');
-        successMessage.textContent = 'Thank you for your message! We will get back to you shortly.';
-        successMessage.style.color = 'green';
-        successMessage.style.marginTop = '10px';
-        contactForm.appendChild(successMessage);
-
-        setTimeout(() => {
+        fetch('send_enquiry.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.text())
+        .then(data => {
+            formStatus.innerHTML = data;
             contactForm.reset();
-            successMessage.remove();
-        }, 3000);
+        })
+        .catch(error => {
+            formStatus.innerHTML = "Oops! There was a problem with your submission. Please try again.";
+        });
     });
 
     const scrollToTopBtn = document.getElementById("scroll-to-top");
