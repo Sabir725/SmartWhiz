@@ -50,12 +50,14 @@
     }
 
     .courses-container .course-cards {
-        flex-direction: column;
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
     }
 
     .course-cards .card {
-        flex: 1 1 100%;
-        margin-bottom: 20px;
+        flex: 0 0 80%;
+        margin-right: 20px;
     }
 
     .beyond-admissions-container {
@@ -71,12 +73,14 @@
     }
 
     .testimonial-cards {
-        flex-direction: column;
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
     }
 
     .testimonial-card {
-        flex: 1 1 100%;
-        margin-bottom: 20px;
+        flex: 0 0 80%;
+        margin-right: 20px;
     }
 
     .contact-wrapper {
@@ -93,6 +97,16 @@
     .footer-courses,
     .footer-contact {
         text-align: center;
+    }
+
+    .modal-content {
+        width: 90%;
+        margin: 20% auto;
+    }
+
+    #free-counseling-form .form-row {
+        flex-direction: column;
+        gap: 0;
     }
 }
 
@@ -112,5 +126,13 @@
     }
     .footer-container {
         padding: 0 20px;
+    }
+
+    .course-cards .card {
+        flex: 0 0 90%;
+    }
+
+    .testimonial-card {
+        flex: 0 0 90%;
     }
 }
