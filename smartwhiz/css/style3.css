@@ -747,12 +747,12 @@ nav {
     background-color: #3498db;
 }
 
-#counselling-form .form-group {
+#contact-form .form-group {
     position: relative;
     margin-bottom: 15px;
 }
 
-#counselling-form .form-group i {
+#contact-form .form-group i {
     position: absolute;
     top: 50%;
     left: 15px;
@@ -761,7 +761,7 @@ nav {
     font-size: 16px;
 }
 
-#counselling-form input, #counselling-form textarea {
+#contact-form input, #contact-form textarea {
     width: 100%;
     padding: 15px 15px 15px 45px;
     border: 1px solid #ddd;
@@ -770,17 +770,17 @@ nav {
     transition: border-color 0.3s ease;
 }
 
-#counselling-form input:focus, #counselling-form textarea:focus {
+#contact-form input:focus, #contact-form textarea:focus {
     outline: none;
     border-color: #3498db;
 }
 
-#counselling-form textarea {
+#contact-form textarea {
     height: 100px;
     resize: vertical;
 }
 
-#counselling-form button {
+#contact-form button {
     width: 100%;
     padding: 15px;
     background-color: #e67e22;
@@ -793,7 +793,7 @@ nav {
     transition: background-color 0.3s ease;
 }
 
-#counselling-form button:hover {
+#contact-form button:hover {
     background-color: #d35400;
 }
 

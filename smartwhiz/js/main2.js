@@ -99,7 +99,9 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
     const observer = new IntersectionObserver(animateStats, { threshold: 0.5 });
-    observer.observe(statsContainer);
+    if(statsContainer) {
+        observer.observe(statsContainer);
+    }
 
     const bankLogos = document.querySelector('.bank-logos');
     if (bankLogos) {
@@ -119,117 +121,132 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Enquiry Form
+    // Modal Handling
     const enquiryBtn = document.getElementById('enquiry-now-btn');
-    const modal = document.getElementById('enquiry-modal');
-    const closeBtn = document.querySelector('.close-btn');
-    
-    enquiryBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        modal.style.display = 'block';
-    });
+    const enquiryModal = document.getElementById('enquiry-modal');
+    const thankYouModal = document.getElementById('thank-you-modal');
+    const modals = document.querySelectorAll('.modal');
+    const closeBtns = document.querySelectorAll('.close-btn');
+    const container = document.querySelector('body');
 
-    closeBtn.addEventListener('click', () => {
-        modal.style.display = 'none';
+    function openModal(modal) {
+        if(modal) {
+            modal.style.display = 'block';
+            container.classList.add('modal-open');
+        }
+    }
+
+    function closeModal(modal) {
+        if(modal) {
+            modal.style.display = 'none';
+            const anyModalOpen = Array.from(modals).some(m => m.style.display === 'block');
+            if (!anyModalOpen) {
+                container.classList.remove('modal-open');
+            }
+        }
+    }
+
+    if(enquiryBtn) {
+        enquiryBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            openModal(enquiryModal);
+        });
+    }
+
+    closeBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const modal = btn.closest('.modal');
+            closeModal(modal);
+        });
     });
 
     window.addEventListener('click', (e) => {
-        if (e.target == modal) {
-            modal.style.display = 'none';
-        }
+        modals.forEach(modal => {
+            if (e.target == modal) {
+                closeModal(modal);
+            }
+        });
     });
 
-    const scrollToTopBtn = document.getElementById("scroll-to-top");
-
-    window.onscroll = function() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            scrollToTopBtn.style.display = "block";
-        } else {
-            scrollToTopBtn.style.display = "none";
-        }
-    };
-
-    scrollToTopBtn.onclick = function() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-    }
-
-    const hero = document.getElementById('hero');
-    const images = [
-        '/smartwhiz/images/Landing1.jpg',
-        '/smartwhiz/images/Landing2.jpg'
-    ];
-    let currentImageIndex = 0;
-
-    function changeBackgroundImage() {
-        hero.style.backgroundImage = `url(${images[currentImageIndex]})`;
-        currentImageIndex = (currentImageIndex + 1) % images.length;
-    }
-
-    setInterval(changeBackgroundImage, 5000);
-    changeBackgroundImage();
-
-    // --- Form Submission to Pop-up ---
-    const thankYouModal = document.getElementById('thank-you-modal');
-    const thankYouCloseBtn = document.querySelector('.thank-you-close-btn');
-
-    const handleFormSubmit = async (event) => {
+    const handleFormSubmit = (event) => {
         event.preventDefault(); // Prevent default form submission
         const form = event.target;
         const formData = new FormData(form);
         const action = form.getAttribute('action');
 
-        try {
-            const response = await fetch(action, {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            });
-
-            if (response.ok) {
-                // Hide the form's modal if it exists
-                const parentModal = form.closest('.modal');
-                if (parentModal) {
-                    parentModal.style.display = 'none';
-                }
-
-                // Reset the form
-                form.reset();
-
-                // Show the thank you pop-up
-                thankYouModal.style.display = 'block';
-            } else {
-                // Handle server errors (e.g., if formsubmit.co is down)
-                alert('Oops! There was a problem submitting your form. Please try again later.');
+        // Send form data in the background
+        fetch(action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
             }
-        } catch (error) {
-            // Handle network errors
-            console.error('Submission error:', error);
-            alert('Oops! There was a network problem. Please check your connection and try again.');
+        }).catch(error => {
+            // Log errors to the console, but don't show an alert to the user.
+            console.error('Form submission error:', error);
+        });
+
+        // Hide the form's modal
+        const parentModal = form.closest('.modal');
+        if (parentModal) {
+            closeModal(parentModal);
+        } else {
+            // If the form is not in a modal, we still want to show the thank you message
+            openModal(thankYouModal); 
         }
+
+        // Reset the form
+        form.reset();
+
+        // Show the thank you pop-up
+        openModal(thankYouModal);
     };
 
     const freeCounselingForm = document.getElementById('free-counseling-form');
-    const contactForm = document.getElementById('counselling-form');
 
     if (freeCounselingForm) {
         freeCounselingForm.addEventListener('submit', handleFormSubmit);
     }
+
+    const contactForm = document.getElementById('contact-form');
+
     if (contactForm) {
         contactForm.addEventListener('submit', handleFormSubmit);
     }
 
-    // Close the thank you modal
-    thankYouCloseBtn.addEventListener('click', () => {
-        thankYouModal.style.display = 'none';
-    });
+    const scrollToTopBtn = document.getElementById("scroll-to-top");
 
-    // Close thank you modal on outside click
-    window.addEventListener('click', (e) => {
-        if (e.target == thankYouModal) {
-            thankYouModal.style.display = 'none';
+    if(scrollToTopBtn) {
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        };
+
+        scrollToTopBtn.onclick = function() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
         }
-    });
+    }
+
+    const hero = document.getElementById('hero');
+    const images = [
+        'smartwhiz/images/Landing1.jpg',
+        'smartwhiz/images/Landing2.jpg'
+    ];
+    let currentImageIndex = 0;
+
+    function changeBackgroundImage() {
+        if(hero) {
+            hero.style.backgroundImage = `url(${images[currentImageIndex]})`;
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+        }
+    }
+
+    if(hero) {
+        setInterval(changeBackgroundImage, 5000);
+        changeBackgroundImage();
+    }
 });
