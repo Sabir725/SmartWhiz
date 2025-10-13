@@ -214,23 +214,6 @@ document.addEventListener('DOMContentLoaded', function () {
         contactForm.addEventListener('submit', handleFormSubmit);
     }
 
-    const scrollToTopBtn = document.getElementById("scroll-to-top");
-
-    if(scrollToTopBtn) {
-        window.onscroll = function() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                scrollToTopBtn.style.display = "block";
-            } else {
-                scrollToTopBtn.style.display = "none";
-            }
-        };
-
-        scrollToTopBtn.onclick = function() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
-    }
-
     const hero = document.getElementById('hero');
     const images = [
         'smartwhiz/images/Landing1.jpg',
