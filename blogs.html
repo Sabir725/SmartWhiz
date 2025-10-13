@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs - SmartWhiz Edutech</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="smartwhiz/css/style3.css">
+    <link rel="stylesheet" href="smartwhiz/css/style2.css">
+    <style>
+        .blog-container {
+            padding: 80px 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 40px;
+            justify-items: center;
+        }
+        .blog-card {
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+        .blog-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .blog-content {
+            padding: 25px;
+        }
+        .blog-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        .blog-content p {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .read-more-btn {
+            background: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+        .read-more-btn:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="top-bar-container">
+            <div class="top-bar-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="top-bar-contact">
+                <a href="mailto:info@smartwhizedu.com"><i class="fas fa-envelope"></i> info@smartwhizedu.com</a>
+                <a href="tel:+917888066601"><i class="fas fa-phone-alt"></i> +91 78880 66601</a>
+            </div>
+        </div>
+    </div>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="smartwhiz/images/logo.png" alt="SmartWhiz Edutech"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="index.html#courses">Courses</a></li>
+                <li><a href="index.html#our-services">Services</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="index.html#contact">Contact Us</a></li>
+                <li><a href="#" id="enquiry-now-btn" class="enquiry-now-btn">Enquiry Now</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="blogs">
+        <div class="container">
+            <div class="section-title">
+                <p class="tittle"><i class="fas fa-feather-alt"></i> Our Blogs</p>
+                <h2 class="sub-tittle">Latest Insights & News</h2>
+            </div>
+            <div class="blog-container">
+                <div class="blog-.card">
+                    <img src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="MBA Admissions">
+                    <div class="blog-content">
+                        <h3>Top 10 MBA Colleges in India: A Comprehensive Guide</h3>
+                        <p>Choosing the right MBA college is a critical step towards a successful management career. Explore our list of the top 10 MBA colleges in India, ranked by their academic excellence, faculty, and placement records. Discover what makes each institution unique and how they can help you achieve your career goals.</p>
+                        <a href="#" class="read-more-btn">Read More</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <img src="https://images.pexels.com/photos/3825527/pexels-photo-3825527.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="MBBS Admissions">
+                    <div class="blog-content">
+                        <h3>Navigating the MBBS Admission Process in India</h3>
+                        <p>The journey to becoming a doctor is challenging but rewarding. This guide provides a detailed overview of the MBBS admission process in India, including key entrance exams, eligibility criteria, and counseling procedures. Learn how to prepare effectively and secure a seat in a top medical college.</p>
+                        <a href="#" class="read-more-btn">Read More</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <img src="https://images.pexels.com/photos/1595391/pexels-photo-1595391.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Study Abroad">
+                    <div class="blog-content">
+                        <h3>Your Ultimate Guide to Studying Abroad</h3>
+                        <p>Dreaming of an international education? Our guide to studying abroad covers everything you need to know, from choosing the right country and university to navigating the visa application process. Get expert tips on scholarships, accommodation, and pre-departure preparations for a smooth transition.</p>
+                        <a href="#" class="read-more-btn">Read More</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <img src="https://images.pexels.com/photos/267507/pexels-photo-267507.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Top 10 MBA Colleges in Pune">
+                    <div class="blog-content">
+                        <h3>Top 10 MBA Colleges in Pune</h3>
+                        <p>Pune, the "Oxford of the East," is a premier destination for management education in India. Discover the top 10 MBA colleges in Pune with our comprehensive guide.</p>
+                        <a href="top-mba-colleges-in-pune.html" class="read-more-btn">Read More</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Top 10 MBA Colleges in Mumbai">
+                    <div class="blog-content">
+                        <h3>Top 10 MBA Colleges in Mumbai</h3>
+                        <p>Mumbai, the financial capital of India, is a top destination for aspiring business leaders. Explore the leading MBA colleges in Mumbai with our detailed guide.</p>
+                        <a href="top-mba-colleges-in-mumbai.html" class="read-more-btn">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-about">
+            <img src="smartwhiz/images/logo.png" alt="SmartWhiz Edutech" class="footer-logo">
+            <p>Your trusted partner in navigating the path to higher education. We provide expert guidance and support to help you achieve your academic and professional goals.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="index.html#courses">Courses</a></li>
+                <li><a href="index.html#our-services">Services</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="index.html#contact">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-courses">
+            <h4>Courses</h4>
+            <ul>
+                <li><a href="index.html#courses">Management</a></li>
+                <li><a href="index.html#courses">Medical</a></li>
+                <li><a href="index.html#courses">Engineering</a></li>
+                <li><a href="index.html#courses">Law</a></li>
+                <li><a href="index.html#courses">Others</a></li>
+            </ul>
+        </div>
+        <div class="footer-contact">
+            <h4>Contact Us</h4>
+            <ul>
+                <li><i class="fas fa-map-marker-alt"></i><span>1st Floor, SmartWhiz Edutech, Mangalwari Bazar Rd, opposite Raisoni College, Sadar, Nagpur, Maharashtra 440001</span></li>
+                <li><i class="fas fa-phone"></i><span>+91 78880 66601</span></li>
+                <li><i class="fas fa-envelope"></i><span>info@smartwhizedu.com</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2017 SmartWhiz Edutech. All Rights Reserved.</p>
+    </div>
+</footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="smartwhiz/js/main2.js"></script>
+</body>
+</html>
