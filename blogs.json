@@ -1,0 +1,56 @@
+[
+    {
+        "title": "Top 10 MBA Colleges in India: A Comprehensive Guide",
+        "description": "Choosing the right MBA college is a critical step towards a successful management career. Explore our list of the top 10 MBA colleges in India, ranked by their academic excellence, faculty, and placement records.",
+        "url": "#",
+        "category": "MBA",
+        "icon": "fas fa-briefcase",
+        "color": "#3498db",
+        "image": "smartwhiz/images/Landing1.jpg"
+    },
+    {
+        "title": "Navigating the MBBS Admission Process in India",
+        "description": "The journey to becoming a doctor is challenging but rewarding. This guide provides a detailed overview of the MBBS admission process in India, including key entrance exams, eligibility criteria, and counseling procedures.",
+        "url": "#",
+        "category": "MBBS",
+        "icon": "fas fa-user-md",
+        "color": "#e74c3c",
+        "image": "smartwhiz/images/Landing1.jpg"
+    },
+    {
+        "title": "Your Ultimate Guide to Studying Abroad",
+        "description": "Dreaming of an international education? Our guide to studying abroad covers everything you need to know, from choosing the right country and university to navigating the visa application process.",
+        "url": "#",
+        "category": "Study Abroad",
+        "icon": "fas fa-globe-americas",
+        "color": "#2ecc71",
+        "image": "smartwhiz/images/Landing1.jpg"
+    },
+    {
+        "title": "Top 10 MBA Colleges in Pune",
+        "description": "Pune, the 'Oxford of the East,' is a premier destination for management education in India. Discover the top 10 MBA colleges in Pune with our comprehensive guide.",
+        "url": "top-mba-colleges-in-pune.html",
+        "category": "MBA",
+        "icon": "fas fa-briefcase",
+        "color": "#3498db",
+        "image": "smartwhiz/images/Landing1.jpg"
+    },
+    {
+        "title": "Top 10 MBA Colleges in Mumbai",
+        "description": "Mumbai, the financial capital of India, is a top destination for aspiring business leaders. Explore the leading MBA colleges in Mumbai with our detailed guide.",
+        "url": "top-mba-colleges-in-mumbai.html",
+        "category": "MBA",
+        "icon": "fas fa-briefcase",
+        "color": "#3498db",
+        "image": "smartwhiz/images/Landing1.jpg"
+    },
+    {
+        "title": "CAT Exam Preparation Tips",
+        "description": "Ace the CAT exam with our expert preparation tips. Learn the best strategies for each section, time management techniques, and how to stay motivated.",
+        "url": "cat-exam-tips.html",
+        "category": "Exams",
+        "icon": "fas fa-graduation-cap",
+        "color": "#f39c12",
+        "image": "smartwhiz/images/Landing1.jpg"
+    }
+]

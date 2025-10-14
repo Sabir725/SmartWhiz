@@ -3,40 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blogs - SmartWhiz Edutech</title>
+    <title>Blogs - Top Admission Consultancy | SmartWhiz Edutech</title>
+    <meta name="description" content="Explore insightful articles on top MBA colleges, MBBS abroad, and expert admission consultancy. Your guide to making informed decisions for a successful academic journey.">
+    <meta name="keywords" content="top admission consultancy, top college admission, top mba college, mbbs abroad, smartwhiz edutech, education blogs">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7/themes/algolia-min.css">
     <link rel="stylesheet" href="smartwhiz/css/style3.css">
     <link rel="stylesheet" href="smartwhiz/css/style2.css">
     <style>
-        .blog-container {
+        .blog-hero {
+            min-height: 300px;
+            background: linear-gradient(45deg, #007bff, #6f42c1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            padding: 60px 20px;
+        }
+        .blog-hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            width: 100%;
+        }
+        .blog-hero h1 {
+            font-size: 2.8rem;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        #search-box .ais-SearchBox-form {
+            position: relative;
+            display: flex;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 50px;
+            border: 1px solid #ddd;
+            box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.1);
+        }
+        #search-box .ais-SearchBox-input {
+            width: 100%;
+            padding: 15px 25px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            border: none;
+            background: transparent;
+            color: #333;
+        }
+        #search-box .ais-SearchBox-input::placeholder {
+            color: #aaa;
+        }
+        #search-box .ais-SearchBox-submit {
+           display: none;
+        }
+        .top-searches-bar {
+            background-color: #f0f2f5;
+            padding: 20px 0;
+        }
+        .top-searches {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .top-search-btn {
+            background: #fff;
+            border: 1px solid #ddd;
+            color: #333;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        .top-search-btn:hover {
+            background-color: #007bff;
+            border-color: #007bff;
+            color: #fff;
+            transform: translateY(-2px);
+        }
+        #hits-container {
             padding: 80px 20px;
+            background-color: #f9f9f9;
+        }
+        #hits {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 40px;
-            justify-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
         }
         .blog-card {
+            display: flex;
+            flex-direction: column;
             background: #fff;
             border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
+            overflow: hidden;
+            border-top: 4px solid #007bff;
         }
         .blog-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
         }
-        .blog-card img {
+        .blog-card-image {
             width: 100%;
             height: 200px;
+            overflow: hidden;
+        }
+        .blog-card-image img {
+            width: 100%;
+            height: 100%;
             object-fit: cover;
         }
         .blog-content {
-            padding: 25px;
+            padding: 30px;
+            text-align: left;
         }
         .blog-content h3 {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             margin-bottom: 15px;
             color: #333;
         }
@@ -46,13 +137,15 @@
             margin-bottom: 20px;
         }
         .read-more-btn {
+            display: inline-block;
             background: #007bff;
-            color: #fff;
+            color: #fff !important;
             padding: 10px 20px;
             border-radius: 5px;
             text-decoration: none;
             font-weight: bold;
-            transition: background 0.3s ease;
+            margin-top: 15px;
+            transition: background-color 0.3s ease;
         }
         .read-more-btn:hover {
             background: #0056b3;
@@ -96,105 +189,144 @@
         </nav>
     </header>
 
-    <section id="blogs">
-        <div class="container">
-            <div class="section-title">
-                <p class="tittle"><i class="fas fa-feather-alt"></i> Our Blogs</p>
-                <h2 class="sub-tittle">Latest Insights & News</h2>
-            </div>
-            <div class="blog-container">
-                <div class="blog-.card">
-                    <img src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="MBA Admissions">
-                    <div class="blog-content">
-                        <h3>Top 10 MBA Colleges in India: A Comprehensive Guide</h3>
-                        <p>Choosing the right MBA college is a critical step towards a successful management career. Explore our list of the top 10 MBA colleges in India, ranked by their academic excellence, faculty, and placement records. Discover what makes each institution unique and how they can help you achieve your career goals.</p>
-                        <a href="#" class="read-more-btn">Read More</a>
-                    </div>
-                </div>
-                <div class="blog-card">
-                    <img src="https://images.pexels.com/photos/3825527/pexels-photo-3825527.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="MBBS Admissions">
-                    <div class="blog-content">
-                        <h3>Navigating the MBBS Admission Process in India</h3>
-                        <p>The journey to becoming a doctor is challenging but rewarding. This guide provides a detailed overview of the MBBS admission process in India, including key entrance exams, eligibility criteria, and counseling procedures. Learn how to prepare effectively and secure a seat in a top medical college.</p>
-                        <a href="#" class="read-more-btn">Read More</a>
-                    </div>
-                </div>
-                <div class="blog-card">
-                    <img src="https://images.pexels.com/photos/1595391/pexels-photo-1595391.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Study Abroad">
-                    <div class="blog-content">
-                        <h3>Your Ultimate Guide to Studying Abroad</h3>
-                        <p>Dreaming of an international education? Our guide to studying abroad covers everything you need to know, from choosing the right country and university to navigating the visa application process. Get expert tips on scholarships, accommodation, and pre-departure preparations for a smooth transition.</p>
-                        <a href="#" class="read-more-btn">Read More</a>
-                    </div>
-                </div>
-                <div class="blog-card">
-                    <img src="https://images.pexels.com/photos/267507/pexels-photo-267507.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Top 10 MBA Colleges in Pune">
-                    <div class="blog-content">
-                        <h3>Top 10 MBA Colleges in Pune</h3>
-                        <p>Pune, the "Oxford of the East," is a premier destination for management education in India. Discover the top 10 MBA colleges in Pune with our comprehensive guide.</p>
-                        <a href="top-mba-colleges-in-pune.html" class="read-more-btn">Read More</a>
-                    </div>
-                </div>
-                <div class="blog-card">
-                    <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Top 10 MBA Colleges in Mumbai">
-                    <div class="blog-content">
-                        <h3>Top 10 MBA Colleges in Mumbai</h3>
-                        <p>Mumbai, the financial capital of India, is a top destination for aspiring business leaders. Explore the leading MBA colleges in Mumbai with our detailed guide.</p>
-                        <a href="top-mba-colleges-in-mumbai.html" class="read-more-btn">Read More</a>
-                    </div>
-                </div>
-            </div>
+    <section class="blog-hero">
+        <div class="blog-hero-content">
+            <h1>Search Our Expert Articles & Guides</h1>
+            <div id="search-box"></div>
         </div>
     </section>
 
+    <section class="top-searches-bar">
+        <div class="top-searches">
+            <button class="top-search-btn">Top MBA Colleges</button>
+            <button class="top-search-btn">Top PGDM Colleges</button>
+            <button class="top-search-btn">MBBS in Abroad</button>
+            <button class="top-search-btn">Top MBA Admission Consultancy</button>
+            <button class="top-search-btn">Top Study Abroad Consultancy</button>
+            <button class="top-search-btn">CAT Exam Tips</button>
+            <button class="top-search-btn">GMAT Preparation</button>
+            <button class="top-search-btn">IELTS Prep</button>
+            <button class="top-search-btn">Statement of Purpose</button>
+            <button class="top-search-btn">Top Law Colleges</button>
+            <button class="top-search-btn">Engineering Colleges</button>
+            <button class="top-search-btn">Study in USA</button>
+            <button class="top-search-btn">B.Tech Admission</button>
+            <button class="top-search-btn">How to Choose a Career</button>
+            <button class="top-search-btn">Scholarship Opportunities</button>
+        </div>
+    </section>
+
+    <section id="hits-container">
+        <div id="hits"></div>
+    </section>
+
     <footer class="footer">
-    <div class="footer-container">
-        <div class="footer-about">
-            <img src="smartwhiz/images/logo.png" alt="SmartWhiz Edutech" class="footer-logo">
-            <p>Your trusted partner in navigating the path to higher education. We provide expert guidance and support to help you achieve your academic and professional goals.</p>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
+        <div class="footer-container">
+            <div class="footer-about">
+                <img src="smartwhiz/images/logo.png" alt="SmartWhiz Edutech" class="footer-logo">
+                <p>Your trusted partner in navigating the path to higher education. We provide expert guidance and support to help you achieve your academic and professional goals.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="blogs.html">Blogs</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i><span>1st Floor, SmartWhiz Edutech, Mangalwari Bazar Rd, opposite Raisoni College, Sadar, Nagpur, Maharashtra 440001</span></li>
+                    <li><i class="fas fa-phone"></i><span>+91 78880 66601</span></li>
+                </ul>
             </div>
         </div>
-        <div class="footer-links">
-            <h4>Quick Links</h4>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#about">About Us</a></li>
-                <li><a href="index.html#courses">Courses</a></li>
-                <li><a href="index.html#our-services">Services</a></li>
-                <li><a href="blogs.html">Blogs</a></li>
-                <li><a href="index.html#contact">Contact Us</a></li>
-            </ul>
+        <div class="footer-bottom">
+            <p>&copy; 2017 SmartWhiz Edutech. All Rights Reserved.</p>
         </div>
-        <div class="footer-courses">
-            <h4>Courses</h4>
-            <ul>
-                <li><a href="index.html#courses">Management</a></li>
-                <li><a href="index.html#courses">Medical</a></li>
-                <li><a href="index.html#courses">Engineering</a></li>
-                <li><a href="index.html#courses">Law</a></li>
-                <li><a href="index.html#courses">Others</a></li>
-            </ul>
-        </div>
-        <div class="footer-contact">
-            <h4>Contact Us</h4>
-            <ul>
-                <li><i class="fas fa-map-marker-alt"></i><span>1st Floor, SmartWhiz Edutech, Mangalwari Bazar Rd, opposite Raisoni College, Sadar, Nagpur, Maharashtra 440001</span></li>
-                <li><i class="fas fa-phone"></i><span>+91 78880 66601</span></li>
-                <li><i class="fas fa-envelope"></i><span>info@smartwhizedu.com</span></li>
-            </ul>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2017 SmartWhiz Edutech. All Rights Reserved.</p>
-    </div>
-</footer>
+    </footer>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="smartwhiz/js/main2.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4"></script>
+    <script>
+        const searchClient = algoliasearch('YOUR_APP_ID', 'YOUR_SEARCH_API_KEY');
+
+        const search = instantsearch({
+            indexName: 'YOUR_INDEX_NAME',
+            searchClient,
+        });
+
+        const hitsContainer = document.getElementById('hits');
+        let allPosts = [];
+
+        function displayInitialPosts(posts) {
+            hitsContainer.innerHTML = posts.map(post => `
+                <div class="blog-card">
+                    <div class="blog-card-image">
+                        <img src="${post.image}" alt="${post.title}">
+                    </div>
+                    <div class="blog-content">
+                        <h3>${post.title}</h3>
+                        <p>${post.description}</p>
+                        <a href="${post.url}" class="read-more-btn">Read More</a>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        fetch("blogs.json")
+            .then(response => response.json())
+            .then(data => {
+                allPosts = data;
+                if (!search.helper.state.query) {
+                    displayInitialPosts(allPosts);
+                }
+            });
+
+        search.addWidgets([
+            instantsearch.widgets.searchBox({
+                container: '#search-box',
+                placeholder: 'Search for articles, colleges, exams...',
+            }),
+            instantsearch.widgets.hits({
+                container: '#hits',
+                templates: {
+                    item: `
+                        <div class="blog-card">
+                             <div class="blog-card-image">
+                                <img src="{{image}}" alt="{{#helpers.highlight}}{ \"attribute\": \"title\" }{{/helpers.highlight}}">
+                            </div>
+                            <div class="blog-content">
+                                <h3>{{#helpers.highlight}}{ \"attribute\": \"title\" }{{/helpers.highlight}}</h3>
+                                <p>{{#helpers.snippet}}{ \"attribute\": \"description\" }{{/helpers.snippet}}</p>
+                                <a href="{{url}}" class="read-more-btn">Read More</a>
+                            </div>
+                        </div>
+                    `,
+                    empty(results) {
+                        return '<h2>No results found.</h2><p>Try a different search or browse our initial posts.</p>';
+                    }
+                }
+            })
+        ]);
+
+        search.on('render', () => {
+            const query = search.helper.state.query;
+            if (!query && allPosts.length > 0) {
+                displayInitialPosts(allPosts);
+            }
+        });
+
+        search.start();
+
+        document.querySelectorAll('.top-search-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const query = btn.textContent;
+                search.helper.setQuery(query).search();
+            });
+        });
+    </script>
 </body>
 </html>

@@ -1,0 +1,62 @@
+[
+    {
+        "objectID": "1",
+        "title": "Top 10 MBA Colleges in India: A Comprehensive Guide",
+        "description": "Choosing the right MBA college is a critical step towards a successful management career. Explore our list of the top 10 MBA colleges in India, ranked by their academic excellence, faculty, and placement records.",
+        "url": "#",
+        "category": "MBA",
+        "icon": "fas fa-briefcase",
+        "color": "#3498db",
+        "content": "This is a placeholder for the full content of the 'Top 10 MBA Colleges in India' blog post."
+    },
+    {
+        "objectID": "2",
+        "title": "Navigating the MBBS Admission Process in India",
+        "description": "The journey to becoming a doctor is challenging but rewarding. This guide provides a detailed overview of the MBBS admission process in India, including key entrance exams, eligibility criteria, and counseling procedures.",
+        "url": "#",
+        "category": "MBBS",
+        "icon": "fas fa-user-md",
+        "color": "#e74c3c",
+        "content": "This is a placeholder for the full content of the 'Navigating the MBBS Admission Process in India' blog post."
+    },
+    {
+        "objectID": "3",
+        "title": "Your Ultimate Guide to Studying Abroad",
+        "description": "Dreaming of an international education? Our guide to studying abroad covers everything you need to know, from choosing the right country and university to navigating the visa application process.",
+        "url": "#",
+        "category": "Study Abroad",
+        "icon": "fas fa-globe-americas",
+        "color": "#2ecc71",
+        "content": "This is a placeholder for the full content of the 'Your Ultimate Guide to Studying Abroad' blog post."
+    },
+    {
+        "objectID": "4",
+        "title": "Top 10 MBA Colleges in Pune",
+        "description": "Pune, the 'Oxford of the East,' is a premier destination for management education in India. Discover the top 10 MBA colleges in Pune with our comprehensive guide.",
+        "url": "top-mba-colleges-in-pune.html",
+        "category": "MBA",
+        "icon": "fas fa-briefcase",
+        "color": "#3498db",
+        "content": "Symbiosis Institute of Business Management (SIBM). Symbiosis Centre for Management and Human Resource Development (SCMHRD). International School of Business & Media (ISB&M). Balaji Institute of Modern Management (BIMM)."
+    },
+    {
+        "objectID": "5",
+        "title": "Top 10 MBA Colleges in Mumbai",
+        "description": "Mumbai, the financial capital of India, is a top destination for aspiring business leaders. Explore the leading MBA colleges in Mumbai with our detailed guide.",
+        "url": "top-mba-colleges-in-mumbai.html",
+        "category": "MBA",
+        "icon": "fas fa-briefcase",
+        "color": "#3498db",
+        "content": "Jamnalal Bajaj Institute of Management Studies (JBIMS). S. P. Jain Institute of Management and Research (SPJIMR). Narsee Monjee Institute of Management Studies (NMIMS). Shailesh J. Mehta School of Management, IIT Bombay."
+    },
+    {
+        "objectID": "6",
+        "title": "CAT Exam Preparation Tips",
+        "description": "Ace the CAT exam with our expert preparation tips. Learn the best strategies for each section, time management techniques, and how to stay motivated.",
+        "url": "cat-exam-tips.html",
+        "category": "Exams",
+        "icon": "fas fa-graduation-cap",
+        "color": "#f39c12",
+        "content": "Understand the Exam Pattern. Create a Study Schedule. Focus on Fundamentals. Practice Mock Tests."
+    }
+]
