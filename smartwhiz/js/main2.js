@@ -232,4 +232,22 @@ document.addEventListener('DOMContentLoaded', function () {
         setInterval(changeBackgroundImage, 5000);
         changeBackgroundImage();
     }
+    
+    // Chat Widget
+    const whatsappToggle = document.getElementById('whatsapp-toggle');
+    const chatWidget = document.getElementById('chat-widget');
+    const chatCloseBtn = document.getElementById('chat-close-btn');
+
+    if (whatsappToggle && chatWidget) {
+        whatsappToggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            chatWidget.classList.toggle('open');
+        });
+    }
+
+    if (chatCloseBtn && chatWidget) {
+        chatCloseBtn.addEventListener('click', () => {
+            chatWidget.classList.remove('open');
+        });
+    }
 });

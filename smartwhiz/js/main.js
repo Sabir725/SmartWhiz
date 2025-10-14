@@ -77,12 +77,15 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     const scrollToTopBtn = document.getElementById("scroll-to-top");
+    const whatsappBtn = document.querySelector(".whatsapp-btn");
 
     window.onscroll = function() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
             scrollToTopBtn.style.display = "block";
+            whatsappBtn.style.display = "block";
         } else {
             scrollToTopBtn.style.display = "none";
+            whatsappBtn.style.display = "none";
         }
     };
 
