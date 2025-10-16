@@ -5,75 +5,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank You - SmartWhiz Edutech</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: #f0f2f5;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            text-align: center;
-        }
-        .container {
-            background: #ffffff;
-            padding: 40px 50px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            max-width: 500px;
-            width: 90%;
-        }
-        .icon {
-            color: #28a745;
-            font-size: 5rem;
-            margin-bottom: 20px;
-            animation: pop-in 0.5s ease-out;
-        }
-        h1 {
-            color: #333;
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-        p {
-            color: #666;
-            font-size: 1.1rem;
-            margin-bottom: 30px;
-        }
-        .back-link {
-            display: inline-block;
-            padding: 12px 25px;
-            background-color: #007bff;
-            color: #ffffff;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-        .back-link:hover {
-            background-color: #0056b3;
-            transform: translateY(-2px);
-        }
-        @keyframes pop-in {
-            0% {
-                transform: scale(0);
-                opacity: 0;
-            }
-            100% {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="smartwhiz/css/style3.css">
+    <link rel="stylesheet" href="smartwhiz/css/style2.css">
 </head>
 <body>
-    <div class="container">
-        <div class="icon">
-            <i class="fas fa-check-circle"></i>
+    <div class="top-bar">
+        <div class="top-bar-container">
+            <div class="top-bar-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="top-bar-contact">
+                <a href="mailto:info@smartwhizedu.com"><i class="fas fa-envelope"></i> info@smartwhizedu.com</a>
+                <a href="tel:+917888066601"><i class="fas fa-phone-alt"></i> +91 78880 66601</a>
+            </div>
         </div>
-        <h1>Thank You!</h1>
-        <p>Your submission has been received. We will be in touch with you shortly.</p>
-        <a href="/index.html" class="back-link">Go Back to Homepage</a>
     </div>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="smartwhiz/images/logo.png" alt="SmartWhiz Edutech"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="index.html#our-services">Services</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="index.html#contact">Contact Us</a></li>
+                <li><a href="#" id="enquiry-now-btn" class="enquiry-now-btn">Enquiry Now</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="thank-you" style="padding-top: 50px; padding-bottom: 50px; text-align: center;">
+        <div class="container">
+            <div class="section-title">
+                <p class="tittle"><i class="fas fa-check-circle"></i> Thank You</p>
+                <h2 class="sub-tittle">Your Submission has been Received</h2>
+            </div>
+            <p>Thank you for contacting us. We have received your submission and will be in touch with you shortly.</p>
+            <a href="index.html" class="cta-button">Back to Home</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-about">
+            <img src="smartwhiz/images/logo.png" alt="SmartWhiz Edutech" class="footer-logo">
+            <p>Your trusted partner in navigating the path to higher education. We provide expert guidance and support to help you achieve your academic and professional goals.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="index.html#our-services">Services</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="index.html#contact">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-courses">
+            <h4>Courses</h4>
+            <ul>
+                <li><a href="management-course.html">Management</a></li>
+                <li><a href="medical-course.html">Medical</a></li>
+                <li><a href="engineering-course.html">Engineering</a></li>
+                <li><a href="law-course.html">Law</a></li>
+                <li><a href="other-courses.html">Others</a></li>
+            </ul>
+        </div>
+        <div class="footer-contact">
+            <h4>Contact Us</h4>
+            <ul>
+                <li><i class="fas fa-map-marker-alt"></i><span>1st Floor, SmartWhiz Edutech, Mangalwari Bazar Rd, opposite Raisoni College, Sadar, Nagpur, Maharashtra 440001</span></li>
+                <li><i class="fas fa-phone"></i><span>+91 78880 66601</span></li>
+                <li><i class="fas fa-envelope"></i><span>info@smartwhizedu.com</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2017 SmartWhiz Edutech. All Rights Reserved.</p>
+    </div>
+</footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="smartwhiz/js/main2.js"></script>
 </body>
 </html>

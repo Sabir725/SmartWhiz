@@ -3,152 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blogs - Top Admission Consultancy | SmartWhiz Edutech</title>
-    <meta name="description" content="Explore insightful articles on top MBA colleges, MBBS abroad, and expert admission consultancy. Your guide to making informed decisions for a successful academic journey.">
-    <meta name="keywords" content="top admission consultancy, top college admission, top mba college, mbbs abroad, smartwhiz edutech, education blogs">
+    <title>Blogs - SmartWhiz Edutech</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7/themes/algolia-min.css">
     <link rel="stylesheet" href="smartwhiz/css/style3.css">
     <link rel="stylesheet" href="smartwhiz/css/style2.css">
     <style>
         .blog-hero {
-            min-height: 300px;
-            background: linear-gradient(45deg, #007bff, #6f42c1);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.pexels.com/photos/267507/pexels-photo-267507.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center/cover;
+            padding: 100px 20px;
             text-align: center;
             color: #fff;
-            padding: 60px 20px;
-        }
-        .blog-hero-content {
-            position: relative;
-            z-index: 1;
-            max-width: 800px;
-            width: 100%;
         }
         .blog-hero h1 {
-            font-size: 2.8rem;
-            font-weight: bold;
-            margin-bottom: 30px;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
         }
-        #search-box .ais-SearchBox-form {
-            position: relative;
-            display: flex;
-            width: 100%;
+        .blog-search-container {
             max-width: 600px;
             margin: 0 auto;
-            background: #fff;
-            border-radius: 50px;
-            border: 1px solid #ddd;
-            box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.1);
+            position: relative;
         }
-        #search-box .ais-SearchBox-input {
+        .blog-search-container input {
             width: 100%;
-            padding: 15px 25px;
-            font-size: 1.2rem;
+            padding: 15px 50px 15px 20px;
             border-radius: 50px;
             border: none;
-            background: transparent;
-            color: #333;
+            font-size: 1rem;
         }
-        #search-box .ais-SearchBox-input::placeholder {
-            color: #aaa;
+        .blog-search-container .fa-search {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            color: #888;
         }
-        #search-box .ais-SearchBox-submit {
-           display: none;
-        }
-        .top-searches-bar {
-            background-color: #f0f2f5;
-            padding: 20px 0;
-        }
-        .top-searches {
+        .blog-main-container {
             display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            justify-content: center;
+            padding: 50px 20px;
             max-width: 1200px;
             margin: 0 auto;
+            gap: 30px;
         }
-        .top-search-btn {
-            background: #fff;
-            border: 1px solid #ddd;
-            color: #333;
-            padding: 10px 20px;
-            border-radius: 20px;
-            cursor: pointer;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            transition: all 0.3s ease;
-        }
-        .top-search-btn:hover {
-            background-color: #007bff;
-            border-color: #007bff;
-            color: #fff;
-            transform: translateY(-2px);
-        }
-        #hits-container {
-            padding: 80px 20px;
-            background-color: #f9f9f9;
-        }
-        #hits {
+        .blog-grid-container {
+            flex: 3;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            max-width: 1200px;
-            margin: 0 auto;
+            gap: 20px;
         }
-        .blog-card {
+        .blog-sidebar {
+            flex: 1;
+        }
+        .blog-post-card {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
             display: flex;
             flex-direction: column;
-            background: #fff;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            overflow: hidden;
-            border-top: 4px solid #007bff;
         }
-        .blog-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        .blog-post-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
         }
-        .blog-card-image {
+        .blog-post-card img {
             width: 100%;
             height: 200px;
-            overflow: hidden;
-        }
-        .blog-card-image img {
-            width: 100%;
-            height: 100%;
             object-fit: cover;
         }
-        .blog-content {
-            padding: 30px;
-            text-align: left;
+        .blog-post-content {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
         }
-        .blog-content h3 {
+        .blog-post-content h3 {
             font-size: 1.4rem;
-            margin-bottom: 15px;
-            color: #333;
+            margin-bottom: 10px;
         }
-        .blog-content p {
+        .blog-post-content p {
             font-size: 1rem;
             color: #666;
             margin-bottom: 20px;
+            flex-grow: 1;
         }
-        .read-more-btn {
-            display: inline-block;
-            background: #007bff;
-            color: #fff !important;
-            padding: 10px 20px;
-            border-radius: 5px;
+        .blog-post-content .cta-button {
+            margin-top: auto;
+            align-self: flex-start;
+        }
+        .trending-topics {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .trending-topics h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+        .trending-topics ul {
+            list-style: none;
+        }
+        .trending-topics li a {
+            display: block;
+            padding: 10px;
+            color: #333;
             text-decoration: none;
-            font-weight: bold;
-            margin-top: 15px;
+            border-radius: 5px;
             transition: background-color 0.3s ease;
         }
-        .read-more-btn:hover {
-            background: #0056b3;
+        .trending-topics li a:hover {
+            background-color: #f0f0f0;
         }
     </style>
 </head>
@@ -174,8 +141,8 @@
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#about">About Us</a></li>
-                <li><a href="index.html#courses">Courses</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="courses.html">Courses</a></li>
                 <li><a href="index.html#our-services">Services</a></li>
                 <li><a href="blogs.html">Blogs</a></li>
                 <li><a href="index.html#contact">Contact Us</a></li>
@@ -191,47 +158,63 @@
 
     <section class="blog-hero">
         <div class="blog-hero-content">
-            <h1>Search Our Expert Articles & Guides</h1>
-            <div id="search-box"></div>
+            <h1>Explore Our Insights</h1>
+            <div class="blog-search-container">
+                <i class="fas fa-search"></i>
+                <input type="text" id="blog-search-input" placeholder="Search for articles, topics, and more...">
+            </div>
         </div>
     </section>
 
-    <section class="top-searches-bar">
-        <div class="top-searches">
-            <button class="top-search-btn">Top MBA Colleges</button>
-            <button class="top-search-btn">Top PGDM Colleges</button>
-            <button class="top-search-btn">MBBS in Abroad</button>
-            <button class="top-search-btn">Top MBA Admission Consultancy</button>
-            <button class="top-search-btn">Top Study Abroad Consultancy</button>
-            <button class="top-search-btn">CAT Exam Tips</button>
-            <button class="top-search-btn">GMAT Preparation</button>
-            <button class="top-search-btn">IELTS Prep</button>
-            <button class="top-search-btn">Statement of Purpose</button>
-            <button class="top-search-btn">Top Law Colleges</button>
-            <button class="top-search-btn">Engineering Colleges</button>
-            <button class="top-search-btn">Study in USA</button>
-            <button class="top-search-btn">B.Tech Admission</button>
-            <button class="top-search-btn">How to Choose a Career</button>
-            <button class="top-search-btn">Scholarship Opportunities</button>
+    <main class="blog-main-container">
+        <div class="blog-grid-container" id="blog-grid">
+            <!-- Blog posts will be dynamically loaded here -->
         </div>
-    </section>
-
-    <section id="hits-container">
-        <div id="hits"></div>
-    </section>
+        <aside class="blog-sidebar">
+            <div class="trending-topics">
+                <h3>Trending Topics</h3>
+                <ul>
+                    <li><a href="#">MBA</a></li>
+                    <li><a href="#">Study Abroad</a></li>
+                    <li><a href="#">Exams</a></li>
+                    <li><a href="#">MBBS</a></li>
+                    <li><a href="#">Career Counseling</a></li>
+                </ul>
+            </div>
+        </aside>
+    </main>
 
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-about">
                 <img src="smartwhiz/images/logo.png" alt="SmartWhiz Edutech" class="footer-logo">
                 <p>Your trusted partner in navigating the path to higher education. We provide expert guidance and support to help you achieve your academic and professional goals.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
             </div>
             <div class="footer-links">
                 <h4>Quick Links</h4>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="index.html#our-services">Services</a></li>
                     <li><a href="blogs.html">Blogs</a></li>
+                    <li><a href="index.html#contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-courses">
+                <h4>Courses</h4>
+                <ul>
+                    <li><a href="management-course.html">Management</a></li>
+                    <li><a href="medical-course.html">Medical</a></li>
+                    <li><a href="engineering-course.html">Engineering</a></li>
+                    <li><a href="law-course.html">Law</a></li>
+                    <li><a href="other-courses.html">Others</a></li>
                 </ul>
             </div>
             <div class="footer-contact">
@@ -239,6 +222,7 @@
                 <ul>
                     <li><i class="fas fa-map-marker-alt"></i><span>1st Floor, SmartWhiz Edutech, Mangalwari Bazar Rd, opposite Raisoni College, Sadar, Nagpur, Maharashtra 440001</span></li>
                     <li><i class="fas fa-phone"></i><span>+91 78880 66601</span></li>
+                    <li><i class="fas fa-envelope"></i><span>info@smartwhizedu.com</span></li>
                 </ul>
             </div>
         </div>
@@ -247,84 +231,49 @@
         </div>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="smartwhiz/js/main2.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4"></script>
     <script>
-        const searchClient = algoliasearch('YOUR_APP_ID', 'YOUR_SEARCH_API_KEY');
+        document.addEventListener('DOMContentLoaded', function () {
+            const blogGrid = document.getElementById('blog-grid');
+            const searchInput = document.getElementById('blog-search-input');
+            let allBlogs = [];
 
-        const search = instantsearch({
-            indexName: 'YOUR_INDEX_NAME',
-            searchClient,
-        });
+            // Fetch blogs from the JSON file
+            fetch('blogs.json')
+                .then(response => response.json())
+                .then(blogs => {
+                    allBlogs = blogs;
+                    displayBlogs(allBlogs);
+                });
 
-        const hitsContainer = document.getElementById('hits');
-        let allPosts = [];
-
-        function displayInitialPosts(posts) {
-            hitsContainer.innerHTML = posts.map(post => `
-                <div class="blog-card">
-                    <div class="blog-card-image">
-                        <img src="${post.image}" alt="${post.title}">
-                    </div>
-                    <div class="blog-content">
-                        <h3>${post.title}</h3>
-                        <p>${post.description}</p>
-                        <a href="${post.url}" class="read-more-btn">Read More</a>
-                    </div>
-                </div>
-            `).join('');
-        }
-
-        fetch("blogs.json")
-            .then(response => response.json())
-            .then(data => {
-                allPosts = data;
-                if (!search.helper.state.query) {
-                    displayInitialPosts(allPosts);
-                }
-            });
-
-        search.addWidgets([
-            instantsearch.widgets.searchBox({
-                container: '#search-box',
-                placeholder: 'Search for articles, colleges, exams...',
-            }),
-            instantsearch.widgets.hits({
-                container: '#hits',
-                templates: {
-                    item: `
-                        <div class="blog-card">
-                             <div class="blog-card-image">
-                                <img src="{{image}}" alt="{{#helpers.highlight}}{ \"attribute\": \"title\" }{{/helpers.highlight}}">
-                            </div>
-                            <div class="blog-content">
-                                <h3>{{#helpers.highlight}}{ \"attribute\": \"title\" }{{/helpers.highlight}}</h3>
-                                <p>{{#helpers.snippet}}{ \"attribute\": \"description\" }{{/helpers.snippet}}</p>
-                                <a href="{{url}}" class="read-more-btn">Read More</a>
-                            </div>
+            // Function to display blogs
+            function displayBlogs(blogs) {
+                blogGrid.innerHTML = '';
+                blogs.forEach(blog => {
+                    const postCard = document.createElement('div');
+                    postCard.className = 'blog-post-card';
+                    postCard.innerHTML = `
+                        <img src="${blog.image}" alt="${blog.title}">
+                        <div class="blog-post-content">
+                            <h3>${blog.title}</h3>
+                            <p>${blog.description}</p>
+                            <a href="${blog.url}" class="cta-button">Read More</a>
                         </div>
-                    `,
-                    empty(results) {
-                        return '<h2>No results found.</h2><p>Try a different search or browse our initial posts.</p>';
-                    }
-                }
-            })
-        ]);
-
-        search.on('render', () => {
-            const query = search.helper.state.query;
-            if (!query && allPosts.length > 0) {
-                displayInitialPosts(allPosts);
+                    `;
+                    blogGrid.appendChild(postCard);
+                });
             }
-        });
 
-        search.start();
-
-        document.querySelectorAll('.top-search-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                const query = btn.textContent;
-                search.helper.setQuery(query).search();
+            // Search functionality
+            searchInput.addEventListener('input', function () {
+                const searchTerm = searchInput.value.toLowerCase();
+                const filteredBlogs = allBlogs.filter(blog => 
+                    blog.title.toLowerCase().includes(searchTerm) || 
+                    blog.description.toLowerCase().includes(searchTerm) ||
+                    blog.category.toLowerCase().includes(searchTerm)
+                );
+                displayBlogs(filteredBlogs);
             });
         });
     </script>
