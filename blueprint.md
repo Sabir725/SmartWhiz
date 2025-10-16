@@ -52,3 +52,16 @@ This document outlines the design, features, and development plan for the SmartW
 2.  **Integrate Existing Blog Posts:** Update the `blogs.html` page to display and link to the existing blog post files (`cat-exam-tips.html`, `top-mba-colleges-in-mumbai.html`, and `top-mba-colleges-in-pune.html`).
 3.  **Create Thank You Page:** Add a confirmation page for form submissions.
 4.  **Final Review:** Conduct a final review of the entire website to check for any issues and ensure everything is working as expected.
+
+### Phase 4: SEO Optimization for `index.html`
+
+**Objective:** Enhance the homepage's visibility on search engines for keywords like "MBA admission," "top college," and "admission consultancy."
+
+**Steps:**
+
+1.  **Update Page Title:** Change the title to be more descriptive and keyword-rich, such as "Top MBA Admission Consultancy | SmartWhiz Edutech | Get into Top Colleges."
+2.  **Add Meta Description:** Include a compelling meta description that summarizes the services and includes primary keywords to improve click-through rates from search results.
+3.  **Optimize On-Page Content:**
+    *   Rewrite the main heading (`<h1>`) to be more direct, for example: "Premier MBA Admission Consultancy for India's Top Colleges."
+    *   Update the introductory paragraph to naturally incorporate relevant keywords.
+4.  **Implement Structured Data (Schema.org):** Add a JSON-LD script to the page's `<head>`. This script will define the business as an `EducationalOrganization` or `LocalBusiness`, providing search engines with clear, structured information about the services offered, which can lead to rich snippets in search results.
