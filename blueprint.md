@@ -1,67 +1,39 @@
-# Project Blueprint: SmartWhiz Edutech Website
+
+# Project Blueprint
 
 ## Overview
 
-This document outlines the design, features, and development plan for the SmartWhiz Edutech website. The website is a modern, responsive, and user-friendly platform designed to provide information about the educational services offered by SmartWhiz Edutech. It aims to attract and engage prospective students, providing them with a seamless experience as they explore their academic options.
+This document outlines the project structure, features, and development plan for the SmartWhiz Edutech website. The website is a comprehensive platform for students seeking admission guidance and career counseling.
+
+## Project Structure
+
+*   `index.html`: The main landing page.
+*   `about.html`: Page describing the company.
+*   `courses.html`: Page detailing the courses offered.
+*   `blogs.html`: Blog page with articles related to education.
+*   `smartwhiz/css/`: Folder for CSS files.
+*   `smartwhiz/js/`: Folder for JavaScript files.
+*   `smartwhiz/images/`: Folder for images.
+
+## Style and Design
+
+The website uses a modern and clean design with a professional color scheme. The layout is responsive and user-friendly, ensuring a seamless experience across all devices.
 
 ## Features
 
-### Core Features
+*   **Free Consultation Form:** Allows users to request a free consultation.
+*   **Course Listings:** Detailed information about various courses.
+*   **Blog Section:** Informative articles on education and career guidance.
+*   **Testimonials:** Student testimonials to build trust.
+*   **Contact Form:** A form for users to get in touch.
+*   **WhatsApp Integration:** A WhatsApp button for instant communication.
 
-*   **Responsive Design:** The website is fully responsive and accessible on all devices, including desktops, tablets, and smartphones.
-*   **Modern UI/UX:** The design is clean, modern, and intuitive, with a focus on user experience.
-*   **Consistent Navigation:** The navigation is consistent across all pages, allowing users to easily browse the site.
-*   **Contact Forms:** The website includes contact forms for users to submit inquiries and get in touch with the SmartWhiz team.
-*   **Thank You Page:** A thank you page confirms form submissions and provides a positive user experience.
+## Current Task: SEO Improvement
 
-### Pages
+### Plan:
 
-*   **Home Page (`index.html`):** The main landing page, featuring a hero section, an overview of services, and links to other pages.
-*   **About Us (`about.html`):** Provides detailed information about SmartWhiz Edutech, its mission, and its team.
-*   **Courses (`courses.html`):** A comprehensive list of the courses offered, with links to individual course pages.
-*   **Course Detail Pages:**
-    *   `management-course.html`
-    *   `medical-course.html`
-    *   `engineering-course.html`
-    *   `law-course.html`
-    *   `other-courses.html`
-*   **Blogs (`blogs.html`):** A collection of articles and posts related to education and career guidance.
-    *   `cat-exam-tips.html`
-    *   `top-mba-colleges-in-mumbai.html`
-    *   `top-mba-colleges-in-pune.html`
-*   **Thank You (`thank-you.html`):** A confirmation page for form submissions.
-
-## Development Plan
-
-### Phase 1: Initial Setup and Home Page
-
-1.  **Project Initialization:** Set up the basic project structure with `index.html`, CSS, and JavaScript files.
-2.  **Home Page Design:** Create the layout and design of the home page, including the header, footer, and main content sections.
-3.  **Responsive Implementation:** Ensure the home page is fully responsive and works on all devices.
-
-### Phase 2: Content Pages
-
-1.  **Create About Us Page:** Add detailed information about the company.
-2.  **Create Courses Page:** List all the courses offered with brief descriptions.
-3.  **Create Individual Course Pages:** Develop separate pages for each course with detailed information.
-4.  **Create Blogs Page:** Add a blog section with a list of blog posts.
-
-### Phase 3: Navigation and Final Touches
-
-1.  **Fix Navigation:** Ensure all navigation links are correct and consistent across the site.
-2.  **Integrate Existing Blog Posts:** Update the `blogs.html` page to display and link to the existing blog post files (`cat-exam-tips.html`, `top-mba-colleges-in-mumbai.html`, and `top-mba-colleges-in-pune.html`).
-3.  **Create Thank You Page:** Add a confirmation page for form submissions.
-4.  **Final Review:** Conduct a final review of the entire website to check for any issues and ensure everything is working as expected.
-
-### Phase 4: SEO Optimization for `index.html`
-
-**Objective:** Enhance the homepage's visibility on search engines for keywords like "MBA admission," "top college," and "admission consultancy."
-
-**Steps:**
-
-1.  **Update Page Title:** Change the title to be more descriptive and keyword-rich, such as "Top MBA Admission Consultancy | SmartWhiz Edutech | Get into Top Colleges."
-2.  **Add Meta Description:** Include a compelling meta description that summarizes the services and includes primary keywords to improve click-through rates from search results.
-3.  **Optimize On-Page Content:**
-    *   Rewrite the main heading (`<h1>`) to be more direct, for example: "Premier MBA Admission Consultancy for India's Top Colleges."
-    *   Update the introductory paragraph to naturally incorporate relevant keywords.
-4.  **Implement Structured Data (Schema.org):** Add a JSON-LD script to the page's `<head>`. This script will define the business as an `EducationalOrganization` or `LocalBusiness`, providing search engines with clear, structured information about the services offered, which can lead to rich snippets in search results.
+1.  **Update Title:** Change the title of `index.html` to be more descriptive and include the target keyword "top Admission consultancy".
+2.  **Add Meta Description:** Add a meta description to `index.html` that summarizes the page content and includes the target keyword.
+3.  **Optimize Header Tags:** Update the `<h1>` tag in `index.html` to feature the target keyword prominently.
+4.  **Content Enrichment:** Naturally integrate the keyword "top admission consultancy" into the content of the "About SmartWhiz" section in `index.html`.
+5.  **Image Alt Text:** Add descriptive alt text to all images in `index.html` to improve accessibility and SEO.
