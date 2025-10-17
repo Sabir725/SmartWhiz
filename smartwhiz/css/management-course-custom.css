@@ -1,0 +1,48 @@
+/* management-course-custom.css */
+
+/* Top Colleges Section - Original Styling */
+.top-colleges {
+    padding: 80px 0;
+}
+
+.top-colleges .section-title h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 50px;
+    color: #1a237e;
+}
+
+.top-colleges .colleges-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.college-logo {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    flex-basis: 150px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.college-logo:hover {
+    transform: scale(1.1);
+}
+
+.college-logo img {
+    max-width: 100%;
+    height: auto;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.college-logo:hover img {
+    filter: grayscale(0%);
+}

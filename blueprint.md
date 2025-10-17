@@ -28,15 +28,20 @@ This document outlines the structure, features, and ongoing development plan for
 *   **Layout:** Modern, card-based design with clear sectioning and ample white space.
 *   **Imagery:** High-quality, relevant images for courses and testimonials.
 
-## Current Plan: Modernize Management Course Page
+## Current Plan: Restructure and Enhance Courses Page
 
-The following steps are being taken to improve the website's visual appeal and user experience, starting with the management course page.
+The following steps have been taken to improve the organization and visual appeal of the courses page, making it more intuitive and engaging for users.
 
-### 1. **`management-course.html` Modernization**
-*   **Objective:** To apply a modern, visually appealing design to the management course page, aligning it with the aesthetic of `courses.html` and current web design trends.
+### 1. **`courses.html` Restructuring**
+*   **Objective:** To move from a general, category-based card layout to a more granular design where each specific course has its own card.
 *   **Actions:**
-    *   Created a new `management-course.html` file with a structured and semantic layout.
-    *   Developed a dedicated stylesheet `smartwhiz/css/management-course.css` for specific styling.
-    *   Implemented a dynamic hero section with a gradient overlay and background image.
-    *   Added sections for "About the Program," "Program Highlights" with icons, and "Top MBA Colleges" with logos.
-    *   Utilized modern CSS properties like `box-shadow` for depth, `flexbox` and `grid` for layout, and hover effects for interactivity.
+    *   Modified the `courses.html` file to group courses under distinct category titles (e.g., "Management," "Medical").
+    *   Within each category, created individual, clickable cards for each course (e.g., MBA, PGDM, MBBS).
+
+### 2. **Visual Enhancement of Course Cards**
+*   **Objective:** To make the course cards more informative and visually appealing.
+*   **Actions:**
+    *   Added a relevant Font Awesome icon to each course card to provide a quick visual reference.
+    *   Included a short, descriptive paragraph within each card to give users a better understanding of the course.
+    *   Updated the `smartwhiz/css/courses-style-v2.css` stylesheet to style the new icons and descriptions, ensuring a clean, modern, and visually balanced layout.
+    *   The new design centers the content, adds more padding, and uses a light grey background to make the cards stand out.
