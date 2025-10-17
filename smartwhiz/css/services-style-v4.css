@@ -1,0 +1,236 @@
+/* services-style-v4.css */
+
+:root {
+    --primary-color: #004080; /* Deep Blue */
+    --secondary-color: #1e90ff; /* Dodger Blue */
+    --accent-color: #f0f8ff;   /* Alice Blue */
+    --text-dark: #333333;
+    --text-light: #666666;
+    --background-light: #ffffff;
+    --background-grey: #f9f9f9;
+}
+
+/* General Body Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.8;
+    color: var(--text-dark);
+    background-color: var(--background-grey);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero Section */
+.services-hero {
+    background: linear-gradient(rgba(0, 64, 128, 0.8), rgba(30, 144, 255, 0.7)), url('https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center/cover;
+    color: white;
+    padding: 120px 0;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+}
+
+.services-hero h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+}
+
+.services-hero p {
+    font-size: 1.6rem;
+    font-weight: 300;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Section General Styles */
+.section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.section-title .tittle {
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    background: var(--accent-color);
+    padding: 12px 25px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+.section-title .sub-tittle {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+/* Services Section */
+#services {
+    background: var(--background-light);
+}
+
+.services-grid-v4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+}
+
+.service-card-v4 {
+    background: var(--background-light);
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card-v4:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.12);
+}
+
+.service-icon-v4 {
+    font-size: 4rem;
+    color: var(--secondary-color);
+    padding: 40px 0;
+}
+
+.service-content-v4 {
+    padding: 0 30px 40px;
+}
+
+.service-content-v4 h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.service-content-v4 p {
+    font-size: 1rem;
+    color: var(--text-light);
+}
+
+/* Process Section */
+#our-process {
+    background-color: var(--background-grey);
+}
+
+.process-timeline-v4 {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.process-step-v4 {
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.step-icon-v4 {
+    width: 90px;
+    height: 90px;
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    border: 6px solid var(--background-grey);
+    margin-bottom: 20px;
+    z-index: 2;
+}
+
+.process-step-v4 h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+/* Why Choose Us Section */
+#why-choose-us {
+    background: var(--background-light);
+}
+
+/* Fix for Why Choose Us section text color */
+#why-choose-us .section-title .tittle {
+    color: var(--primary-color);
+}
+
+#why-choose-us .section-title .sub-tittle {
+    color: var(--text-dark);
+}
+
+.benefits-grid-v4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.benefit-card-v4 {
+    background: var(--accent-color);
+    padding: 40px;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+.benefit-card-v4:hover {
+    background-color: white;
+    border-color: var(--secondary-color);
+}
+
+.benefit-icon-v4 {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.benefit-card-v4 h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.benefit-card-v4 p {
+    color: var(--text-light);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .section-title .sub-tittle {
+        font-size: 2.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-hero {
+        clip-path: none; /* Remove clipping on smaller screens */
+    }
+    .services-hero h1 {
+        font-size: 3rem;
+    }
+    .services-hero p {
+        font-size: 1.4rem;
+    }
+}

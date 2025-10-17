@@ -1,150 +1,140 @@
-/* General Body Styles */
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
-    line-height: 1.6;
+/* courses-style-v2.css */
+
+:root {
+    --primary-color: #004080; /* Deep Blue */
+    --secondary-color: #1e90ff; /* Dodger Blue */
+    --accent-color: #f0f8ff;   /* Alice Blue */
+    --text-dark: #333333;
+    --text-light: #666666;
+    --background-light: #ffffff;
+    --background-grey: #f9f9f9;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Courses Hero Section */
+/* Hero Section */
 .courses-hero {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.pexels.com/photos/1181298/pexels-photo-1181298.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
-    background-size: cover;
-    background-position: center;
+    background: linear-gradient(rgba(0, 64, 128, 0.8), rgba(30, 144, 255, 0.7)), url('https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center/cover;
     color: white;
+    padding: 120px 0;
     text-align: center;
-    padding: 100px 0;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 }
 
 .courses-hero h1 {
-    font-size: 3.5rem;
+    font-size: 4rem;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
 }
 
 .courses-hero p {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 300;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
-/* Courses Section */
-#courses {
+/* Section General Styles */
+.section {
     padding: 80px 0;
+    background-color: var(--background-light);
 }
 
 .section-title {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 70px;
 }
 
 .section-title .tittle {
+    display: inline-block;
     font-size: 1.2rem;
-    color: #007bff;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.section-title .tittle .fa-graduation-cap {
-    margin-right: 10px;
-    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    background: var(--accent-color);
+    padding: 12px 25px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
 }
 
 .section-title .sub-tittle {
-    font-size: 2.8rem;
-    font-weight: 600;
-    color: #003366;
-    margin-top: 10px;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--text-dark);
 }
 
-.course-cards-container {
+/* Courses Section */
+.courses-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
     gap: 40px;
 }
 
-.card {
-    background: white;
+.course-card-v2 {
+    background: var(--background-light);
     border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.12);
+.course-card-v2:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.12);
 }
 
-.card img {
-    width: 100%;
+.course-card-v2 .course-image {
     height: 220px;
+    overflow: hidden;
+}
+
+.course-card-v2 .course-image img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
-.card-content {
-    padding: 25px;
+.course-card-v2 .course-content {
+    padding: 30px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
-.card-content h3 {
+.course-card-v2 .course-content h3 {
     font-size: 1.8rem;
     font-weight: 600;
+    color: var(--primary-color);
     margin-bottom: 15px;
-    display: flex;
-    align-items: center;
 }
 
-.card-content h3 i {
-    margin-right: 12px;
-    color: #007bff;
-}
-
-.course-description p {
+.course-card-v2 .course-content p {
     font-size: 1rem;
-    color: #666;
-    margin-bottom: 20px;
+    color: var(--text-light);
+    flex-grow: 1;
+    margin-bottom: 25px;
 }
 
 .course-read-more-btn {
     display: inline-block;
-    background-color: #007bff;
+    background: var(--secondary-color);
     color: white;
     padding: 12px 25px;
-    border-radius: 8px;
+    border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
+    align-self: flex-start;
 }
 
 .course-read-more-btn:hover {
-    background-color: #0056b3;
+    background: var(--primary-color);
 }
 
-/* Responsive Styles */
-@media (max-width: 992px) {
-    .course-cards-container {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    }
-}
-
+/* Responsive */
 @media (max-width: 768px) {
-    .courses-hero h1 {
-        font-size: 2.8rem;
-    }
-
-    .courses-hero p {
-        font-size: 1.2rem;
-    }
-
-    .section-title .sub-tittle {
-        font-size: 2.2rem;
+    .courses-hero {
+        clip-path: none;
     }
 }
