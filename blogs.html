@@ -4,120 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blogs - SmartWhiz Edutech</title>
+    <meta name="description" content="Read the latest blogs and articles from SmartWhiz Edutech on career counseling, exam preparation, and new courses.">
+    <meta name="keywords" content="education blogs, career advice, study tips, SmartWhiz Edutech blogs">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="smartwhiz/css/style3.css">
-    <link rel="stylesheet" href="smartwhiz/css/style2.css">
-    <style>
-        .blog-hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.pexels.com/photos/267507/pexels-photo-267507.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center/cover;
-            padding: 100px 20px;
-            text-align: center;
-            color: #fff;
-        }
-        .blog-hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-        }
-        .blog-search-container {
-            max-width: 600px;
-            margin: 0 auto;
-            position: relative;
-        }
-        .blog-search-container input {
-            width: 100%;
-            padding: 15px 50px 15px 20px;
-            border-radius: 50px;
-            border: none;
-            font-size: 1rem;
-        }
-        .blog-search-container .fa-search {
-            position: absolute;
-            top: 50%;
-            right: 20px;
-            transform: translateY(-50%);
-            color: #888;
-        }
-        .blog-main-container {
-            display: flex;
-            padding: 50px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-            gap: 30px;
-        }
-        .blog-grid-container {
-            flex: 3;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-        .blog-sidebar {
-            flex: 1;
-        }
-        .blog-post-card {
-            background: #fff;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-        .blog-post-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-        }
-        .blog-post-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-        .blog-post-content {
-            padding: 20px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        .blog-post-content h3 {
-            font-size: 1.4rem;
-            margin-bottom: 10px;
-        }
-        .blog-post-content p {
-            font-size: 1rem;
-            color: #666;
-            margin-bottom: 20px;
-            flex-grow: 1;
-        }
-        .blog-post-content .cta-button {
-            margin-top: auto;
-            align-self: flex-start;
-        }
-        .trending-topics {
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-        .trending-topics h3 {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #f0f0f0;
-            padding-bottom: 10px;
-        }
-        .trending-topics ul {
-            list-style: none;
-        }
-        .trending-topics li a {
-            display: block;
-            padding: 10px;
-            color: #333;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-        .trending-topics li a:hover {
-            background-color: #f0f0f0;
-        }
-    </style>
+    <link rel="stylesheet" href="smartwhiz/css/blogs-style-v2.css">
 </head>
 <body>
     <div class="top-bar">
@@ -137,14 +29,14 @@
     <header>
         <nav>
             <div class="logo">
-                <a href="index.html"><img src="smartwhiz/images/logo.png" alt="SmartWhiz Edutech"></a>
+                <a href="index.html"><img src="smartwhiz/images/logo.png" alt="SmartWhiz Edutech Logo"></a>
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="courses.html">Courses</a></li>
-                <li><a href="index.html#our-services">Services</a></li>
-                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blogs.html" class="active">Blogs</a></li>
                 <li><a href="index.html#contact">Contact Us</a></li>
                 <li><a href="#" id="enquiry-now-btn" class="enquiry-now-btn">Enquiry Now</a></li>
             </ul>
@@ -156,126 +48,114 @@
         </nav>
     </header>
 
-    <section class="blog-hero">
-        <div class="blog-hero-content">
-            <h1>Explore Our Insights</h1>
-            <div class="blog-search-container">
-                <i class="fas fa-search"></i>
-                <input type="text" id="blog-search-input" placeholder="Search for articles, topics, and more...">
+    <section class="blog-hero-v2">
+        <div class="container">
+            <h1>Our Insights</h1>
+            <p>Stay updated with the latest trends and advice in education.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <p class="tittle"><i class="fas fa-newspaper"></i> Latest Articles</p>
+                <h2 class="sub-tittle">From the SmartWhiz Blog</h2>
+            </div>
+            <div class="blog-grid-v2">
+                <div class="blog-card-v2">
+                    <div class="blog-image">
+                        <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Blog Post 1">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-user"></i> By Admin</span>
+                            <span><i class="fas fa-calendar-alt"></i> October 26, 2023</span>
+                        </div>
+                        <h3>Top 5 Benefits of Career Counseling for Students</h3>
+                        <p>Discover how career counseling can help you make informed decisions about your future and set you on the path to success.</p>
+                        <a href="#" class="blog-read-more-btn">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="blog-card-v2">
+                    <div class="blog-image">
+                        <img src="https://images.pexels.com/photos/4145190/pexels-photo-4145190.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Blog Post 2">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-user"></i> By Admin</span>
+                            <span><i class="fas fa-calendar-alt"></i> October 20, 2023</span>
+                        </div>
+                        <h3>How to Choose the Right Engineering Specialization</h3>
+                        <p>A comprehensive guide to help you choose the right engineering specialization based on your interests and career goals.</p>
+                        <a href="#" class="blog-read-more-btn">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="blog-card-v2">
+                    <div class="blog-image">
+                        <img src="https://images.pexels.com/photos/5428263/pexels-photo-5428263.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Blog Post 3">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-user"></i> By Admin</span>
+                            <span><i class="fas fa-calendar-alt"></i> October 15, 2023</span>
+                        </div>
+                        <h3>The Rise of AI and its Impact on Future Careers</h3>
+                        <p>Explore the growing influence of Artificial Intelligence and how it is shaping the job market of the future.</p>
+                        <a href="#" class="blog-read-more-btn">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <main class="blog-main-container">
-        <div class="blog-grid-container" id="blog-grid">
-            <!-- Blog posts will be dynamically loaded here -->
-        </div>
-        <aside class="blog-sidebar">
-            <div class="trending-topics">
-                <h3>Trending Topics</h3>
-                <ul>
-                    <li><a href="#">MBA</a></li>
-                    <li><a href="#">Study Abroad</a></li>
-                    <li><a href="#">Exams</a></li>
-                    <li><a href="#">MBBS</a></li>
-                    <li><a href="#">Career Counseling</a></li>
-                </ul>
-            </div>
-        </aside>
-    </main>
-
     <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-about">
-                <img src="smartwhiz/images/logo.png" alt="SmartWhiz Edutech" class="footer-logo">
-                <p>Your trusted partner in navigating the path to higher education. We provide expert guidance and support to help you achieve your academic and professional goals.</p>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-            <div class="footer-links">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="courses.html">Courses</a></li>
-                    <li><a href="index.html#our-services">Services</a></li>
-                    <li><a href="blogs.html">Blogs</a></li>
-                    <li><a href="index.html#contact">Contact Us</a></li>
-                </ul>
-            </div>
-            <div class="footer-courses">
-                <h4>Courses</h4>
-                <ul>
-                    <li><a href="management-course.html">Management</a></li>
-                    <li><a href="medical-course.html">Medical</a></li>
-                    <li><a href="engineering-course.html">Engineering</a></li>
-                    <li><a href="law-course.html">Law</a></li>
-                    <li><a href="other-courses.html">Others</a></li>
-                </ul>
-            </div>
-            <div class="footer-contact">
-                <h4>Contact Us</h4>
-                <ul>
-                    <li><i class="fas fa-map-marker-alt"></i><span>1st Floor, SmartWhiz Edutech, Mangalwari Bazar Rd, opposite Raisoni College, Sadar, Nagpur, Maharashtra 440001</span></li>
-                    <li><i class="fas fa-phone"></i><span>+91 78880 66601</span></li>
-                    <li><i class="fas fa-envelope"></i><span>info@smartwhizedu.com</span></li>
-                </ul>
+    <div class="footer-container">
+        <div class="footer-about">
+            <img src="smartwhiz/images/logo.png" alt="SmartWhiz Edutech - Your trusted education partner." class="footer-logo">
+            <p>Your trusted partner in navigating the path to higher education. We provide expert guidance and support to help you achieve your academic and professional goals.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2017 SmartWhiz Edutech. All Rights Reserved.</p>
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="index.html#contact">Contact Us</a></li>
+            </ul>
         </div>
-    </footer>
+        <div class="footer-courses">
+            <h4>Courses</h4>
+            <ul>
+                <li><a href="management-course.html">Management</a></li>
+                <li><a href="medical-course.html">Medical</a></li>
+                <li><a href="engineering-course.html">Engineering</a></li>
+                <li><a href="law-course.html">Law</a></li>
+                <li><a href="other-courses.html">Others</a></li>
+            </ul>
+        </div>
+        <div class="footer-contact">
+            <h4>Contact Us</h4>
+            <ul>
+                <li><i class="fas fa-map-marker-alt"></i><span>1st Floor, SmartWhiz Edutech, Mangalwari Bazar Rd, opposite Raisoni College, Sadar, Nagpur, Maharashtra 440001</span></li>
+                <li><i class="fas fa-phone"></i><span>+91 78880 66601</span></li>
+                <li><i class="fas fa-envelope"></i><span>info@smartwhizedu.com</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2017 SmartWhiz Edutech. All Rights Reserved.</p>
+    </div>
+</footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="smartwhiz/js/main2.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const blogGrid = document.getElementById('blog-grid');
-            const searchInput = document.getElementById('blog-search-input');
-            let allBlogs = [];
-
-            // Fetch blogs from the JSON file
-            fetch('blogs.json')
-                .then(response => response.json())
-                .then(blogs => {
-                    allBlogs = blogs;
-                    displayBlogs(allBlogs);
-                });
-
-            // Function to display blogs
-            function displayBlogs(blogs) {
-                blogGrid.innerHTML = '';
-                blogs.forEach(blog => {
-                    const postCard = document.createElement('div');
-                    postCard.className = 'blog-post-card';
-                    postCard.innerHTML = `
-                        <img src="${blog.image}" alt="${blog.title}">
-                        <div class="blog-post-content">
-                            <h3>${blog.title}</h3>
-                            <p>${blog.description}</p>
-                            <a href="${blog.url}" class="cta-button">Read More</a>
-                        </div>
-                    `;
-                    blogGrid.appendChild(postCard);
-                });
-            }
-
-            // Search functionality
-            searchInput.addEventListener('input', function () {
-                const searchTerm = searchInput.value.toLowerCase();
-                const filteredBlogs = allBlogs.filter(blog => 
-                    blog.title.toLowerCase().includes(searchTerm) || 
-                    blog.description.toLowerCase().includes(searchTerm) ||
-                    blog.category.toLowerCase().includes(searchTerm)
-                );
-                displayBlogs(filteredBlogs);
-            });
-        });
-    </script>
 </body>
 </html>
