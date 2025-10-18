@@ -28,20 +28,40 @@ This document outlines the structure, features, and ongoing development plan for
 *   **Layout:** Modern, card-based design with clear sectioning and ample white space.
 *   **Imagery:** High-quality, relevant images for courses and testimonials.
 
-## Current Plan: Restructure and Enhance Courses Page
+## Previous Plans
 
-The following steps have been taken to improve the organization and visual appeal of the courses page, making it more intuitive and engaging for users.
+### Index Page Modifications
+The following changes were made to the `index.html` file to adjust the content presentation.
+*   **Commented out "Top Ranked Institutions" Section:** The `<section id="top-institutions">...</section>` block was enclosed in HTML comments.
+*   **Removed "Read More" Button from "About Us" Section:** The `<a href="about.html" class="cta-button">Read More</a>` link was removed.
 
-### 1. **`courses.html` Restructuring**
-*   **Objective:** To move from a general, category-based card layout to a more granular design where each specific course has its own card.
-*   **Actions:**
-    *   Modified the `courses.html` file to group courses under distinct category titles (e.g., "Management," "Medical").
-    *   Within each category, created individual, clickable cards for each course (e.g., MBA, PGDM, MBBS).
+### Courses Page Restructuring
+*   **`courses.html` Restructuring:** Grouped courses under distinct categories and created individual cards for each course.
+*   **Visual Enhancement of Course Cards:** Added icons and descriptions to course cards and updated the corresponding CSS.
 
-### 2. **Visual Enhancement of Course Cards**
-*   **Objective:** To make the course cards more informative and visually appealing.
-*   **Actions:**
-    *   Added a relevant Font Awesome icon to each course card to provide a quick visual reference.
-    *   Included a short, descriptive paragraph within each card to give users a better understanding of the course.
-    *   Updated the `smartwhiz/css/courses-style-v2.css` stylesheet to style the new icons and descriptions, ensuring a clean, modern, and visually balanced layout.
-    *   The new design centers the content, adds more padding, and uses a light grey background to make the cards stand out.
+## Current Plan: SEO Optimization
+
+The `index.html` file has been optimized for Search Engine Optimization (SEO) to improve its visibility and ranking on search engine results pages.
+
+### 1. **Meta Tags Implementation**
+*   **Objective:** To provide search engines with a summary of the page content and relevant search terms.
+*   **Action:**
+    *   Added a `<meta name="description">` tag with a concise and compelling summary of SmartWhiz Edutech's services.
+    *   Added a `<meta name="keywords">` tag with relevant terms such as "education consultants," "study abroad," "career counseling," "MBA admission," etc.
+
+### 2. **Schema Markup (JSON-LD)**
+*   **Objective:** To help search engines understand the entity and its properties, which can lead to rich snippets in search results.
+*   **Action:**
+    *   Implemented `EducationalOrganization` schema markup within a `<script type="application/ld+json">` tag in the `<head>` section.
+    *   This schema includes the organization's name, URL, logo, contact information, and address.
+
+### 3. **Image `alt` Attribute Optimization**
+*   **Objective:** To improve accessibility and provide search engines with context for the images on the page.
+*   **Action:**
+    *   Reviewed and updated the `alt` attributes for all images in `index.html`.
+    *   Made the `alt` text more descriptive. For example, testimonial images now include the student's name and the institution (e.g., `alt="Testimonial from Shreya Patle, SP Jain, Mumbai"`).
+
+### 4. **Header Tag Review**
+*   **Objective:** To ensure a logical and hierarchical structure of content for both users and search engines.
+*   **Action:**
+    *   Verified that `<h1>`, `<h2>`, and `<h3>` tags are used correctly to structure the page content, with a single `<h1>` for the main heading.
